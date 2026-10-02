@@ -1,0 +1,168 @@
+/* Prono Quinté Rocco — feuille de style.
+   Concept : le programme de course. Le prono se lit comme une carte de
+   partants (numéros sur tapis de selle), le bilan comme un tableau
+   d'affichage, les résultats comme un registre. Aucune ressource externe. */
+:root {
+  --fond: #f2f5f1;        /* gazon délavé, neutre légèrement vert */
+  --carte: #ffffff;
+  --encre: #142019;       /* vert presque noir */
+  --doux: #55665b;        /* texte secondaire */
+  --trait: #d5ddd6;
+  --piste: #1f6a46;       /* vert piste : accent principal */
+  --piste-clair: #e1efe6;
+  --soie: #c98a06;        /* or casaque : rare, pour l'arrivée */
+  --soie-clair: #fbefd2;
+  --perte: #9a3b2e;
+  --titre: "Bahnschrift", "DIN Alternate", "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
+  --texte: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fond: #0d1611; --carte: #15211a; --encre: #e3ebe5; --doux: #9fb2a5;
+    --trait: #2a3a30; --piste: #5cc08a; --piste-clair: #193826;
+    --soie: #f0bf45; --soie-clair: #3a2f12; --perte: #e48a7a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --fond: #0d1611; --carte: #15211a; --encre: #e3ebe5; --doux: #9fb2a5;
+  --trait: #2a3a30; --piste: #5cc08a; --piste-clair: #193826;
+  --soie: #f0bf45; --soie-clair: #3a2f12; --perte: #e48a7a; color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--fond); color: var(--encre);
+  font: 16px/1.55 var(--texte); }
+a { color: var(--piste); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--soie); outline-offset: 2px; }
+.page { max-width: 1040px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; }
+h1, h2, h3 { font-family: var(--titre); font-stretch: condensed; line-height: 1.12;
+  text-wrap: balance; margin: 0; letter-spacing: .01em; }
+h1 { font-size: clamp(1.9rem, 4.6vw, 2.9rem); font-weight: 700; }
+h2 { font-size: 1.45rem; font-weight: 700; }
+h3 { font-size: 1.1rem; font-weight: 700; }
+p { margin: 0; max-width: 65ch; }
+.chiffres, td, .num { font-variant-numeric: tabular-nums; }
+
+/* entête */
+.entete { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 8px 24px; padding-block: 18px; border-bottom: 2px solid var(--encre); }
+.marque { display: flex; align-items: center; gap: 10px; color: var(--encre); text-decoration: none; }
+.marque b { font-family: var(--titre); font-stretch: condensed; font-size: 1.35rem;
+  letter-spacing: .02em; text-transform: uppercase; }
+.marque .tapis { width: 34px; height: 34px; font-size: 1.05rem; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: .95rem; }
+nav a { color: var(--doux); text-decoration: none; padding-block: 4px; }
+nav a[aria-current="page"] { color: var(--encre); font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--piste); }
+
+/* tapis de selle : un numéro de cheval */
+.tapis { display: inline-grid; place-items: center; width: 40px; height: 40px;
+  border-radius: 6px; background: var(--carte); border: 1.5px solid var(--encre);
+  font-family: var(--titre); font-stretch: condensed; font-weight: 700; font-size: 1.15rem;
+  font-variant-numeric: tabular-nums; color: var(--encre); }
+.tapis.plein { background: var(--piste); border-color: var(--piste); color: var(--carte); }
+.tapis.or { background: var(--soie); border-color: var(--soie); color: #1b1404; }
+.tapis.creux { border-style: dashed; color: var(--doux); border-color: var(--doux); }
+.tapis.petit { width: 30px; height: 30px; font-size: .92rem; border-radius: 5px; }
+
+/* carte du prono */
+.une { display: grid; gap: 14px; padding-block: 28px 8px; }
+.surtitre { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--doux); font-weight: 600; }
+.chapo { color: var(--doux); font-size: 1.05rem; }
+.carte-course { background: var(--carte); border: 1px solid var(--trait); border-radius: 10px;
+  padding: 18px; display: grid; gap: 16px; }
+.carte-course .tete { display: flex; flex-wrap: wrap; justify-content: space-between;
+  align-items: baseline; gap: 6px 16px; }
+.meta { color: var(--doux); font-size: .95rem; }
+.partants { list-style: none; margin: 0; padding: 0; display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 10px; }
+.partants li { display: grid; justify-items: center; gap: 4px; }
+.partants .rang { font-size: .78rem; color: var(--doux); letter-spacing: .02em; }
+.pied-carte { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: .9rem; color: var(--doux); }
+.note { display: inline-flex; gap: 3px; vertical-align: middle; }
+.note i { width: 9px; height: 9px; border-radius: 50%; background: var(--trait); }
+.note i.on { background: var(--piste); }
+
+/* tableau d'affichage */
+.bilan { margin-top: 36px; display: grid; gap: 14px; }
+.tableau { display: flex; flex-wrap: wrap; overflow: hidden; border-top: 2px solid var(--encre); }
+.case { flex: 1 1 150px; margin-left: -1px; border-left: 1px solid var(--trait);
+  border-bottom: 1px solid var(--trait); padding: 14px 14px 16px; display: grid; gap: 4px;
+  align-content: start; }
+.case .gros { font-family: var(--titre); font-stretch: condensed; font-size: 2.3rem;
+  font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.case .gros.perte { color: var(--perte); }
+.case .lib { font-size: .9rem; }
+.case .ref { font-size: .8rem; color: var(--doux); }
+.avertissement { background: var(--soie-clair); border-left: 4px solid var(--soie);
+  padding: 12px 14px; border-radius: 0 6px 6px 0; font-size: .95rem; max-width: none; }
+
+/* registre des résultats */
+.registre-boite { overflow-x: auto; border: 1px solid var(--trait); border-radius: 10px;
+  background: var(--carte); }
+table { border-collapse: collapse; width: 100%; min-width: 900px; font-size: .92rem; }
+th { text-align: left; font-weight: 600; font-size: .76rem; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--doux); padding: 10px 8px; border-bottom: 2px solid var(--encre);
+  white-space: nowrap; }
+th.mont { white-space: normal; }
+th:first-child, td:first-child { padding-left: 14px; }
+th:last-child, td:last-child { padding-right: 14px; }
+td { padding: 10px 8px; border-bottom: 1px solid var(--trait); vertical-align: middle; }
+td .tapis.petit { width: 28px; height: 28px; font-size: .88rem; }
+td .rangee { gap: 3px; }
+tr:last-child td { border-bottom: 0; }
+.rangee { display: flex; flex-wrap: wrap; gap: 4px; }
+td .rangee { flex-wrap: nowrap; }
+.etat { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .8rem;
+  font-weight: 600; white-space: nowrap; }
+.etat.gagne { background: var(--soie-clair); color: var(--encre); box-shadow: inset 0 0 0 1px var(--soie); }
+.etat.place { background: var(--piste-clair); color: var(--encre); box-shadow: inset 0 0 0 1px var(--piste); }
+.etat.non { color: var(--doux); box-shadow: inset 0 0 0 1px var(--trait); }
+.etat.attente { color: var(--doux); font-style: italic; }
+.mont { text-align: right; white-space: nowrap; }
+.mont.perte { color: var(--perte); }
+/* téléphone : chaque course devient une fiche (plus de tableau à faire défiler) */
+@media (max-width: 980px) {
+  .registre-boite { overflow: visible; border: 0; background: none; border-radius: 0; }
+  table { min-width: 0; }
+  thead { display: none; }
+  table, tbody, tr, td { display: block; }
+  tr { background: var(--carte); border: 1px solid var(--trait); border-radius: 10px;
+    padding: 10px 12px 4px; margin-bottom: 10px; }
+  td { border: 0; padding: 0; }
+  td.c-date, td.c-course { display: inline; }
+  td.c-date a { font-weight: 700; }
+  td.c-course br { display: none; }
+  td.c-course .meta { margin-left: 6px; }
+  td[data-label] { display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    padding: 8px 0; border-top: 1px solid var(--trait); text-align: right; }
+  td[data-label]:first-of-type { margin-top: 8px; }
+  td[data-label]::before { content: attr(data-label); font-size: .74rem; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--doux); text-align: left; white-space: nowrap; }
+  td .rangee { flex-wrap: wrap; justify-content: flex-end; }
+}
+
+/* pages de texte */
+.texte { display: grid; gap: 18px; padding-block: 28px; max-width: 72ch; }
+.texte h2 { margin-top: 10px; }
+.texte ul, .texte ol { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.legende { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .85rem; color: var(--doux);
+  align-items: center; }
+.legende > span { display: inline-flex; align-items: center; gap: 6px; }
+.deux { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.kv { display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; font-size: .95rem; }
+.kv dt { color: var(--doux); }
+.kv dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* pied de page : jeu responsable */
+.pied { margin-top: 48px; padding-top: 18px; border-top: 2px solid var(--encre);
+  display: grid; gap: 8px; font-size: .86rem; color: var(--doux); }
+.pied strong { color: var(--encre); }
+.majeur { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+  border: 2px solid var(--encre); color: var(--encre); font-weight: 700; font-size: .85rem; }
+.pied .ligne { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+@media (prefers-reduced-motion: no-preference) {
+  .carte-course { animation: entree .35s ease-out both; }
+  @keyframes entree { from { transform: translateY(6px); } to { transform: none; } }
+}

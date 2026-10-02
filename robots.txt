@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://roccogp971.github.io/prono-quinte-rocco/sitemap.xml
