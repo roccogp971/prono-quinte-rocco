@@ -77,7 +77,7 @@ nav a[aria-current="page"] { color: var(--encre); font-weight: 600;
 .meta { color: var(--doux); font-size: .95rem; }
 .partants { list-style: none; margin: 0; padding: 0; display: grid;
   grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 10px; }
-.partants li { display: grid; justify-items: center; gap: 4px; }
+.partants li { display: grid; justify-items: center; align-content: start; gap: 4px; }
 .partants .rang { font-size: .78rem; color: var(--doux); letter-spacing: .02em; }
 .pied-carte { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: .9rem; color: var(--doux); }
 .note { display: inline-flex; gap: 3px; vertical-align: middle; }
@@ -101,7 +101,8 @@ nav a[aria-current="page"] { color: var(--encre); font-weight: 600;
 /* registre des résultats */
 .registre-boite { overflow-x: auto; border: 1px solid var(--trait); border-radius: 10px;
   background: var(--carte); }
-table { border-collapse: collapse; width: 100%; min-width: 900px; font-size: .92rem; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+.registre-boite table { min-width: 900px; }
 th { text-align: left; font-weight: 600; font-size: .76rem; letter-spacing: .08em;
   text-transform: uppercase; color: var(--doux); padding: 10px 8px; border-bottom: 2px solid var(--encre);
   white-space: nowrap; }
@@ -127,23 +128,41 @@ td .rangee { flex-wrap: nowrap; }
 /* téléphone : chaque course devient une fiche (plus de tableau à faire défiler) */
 @media (max-width: 980px) {
   .registre-boite { overflow: visible; border: 0; background: none; border-radius: 0; }
-  table { min-width: 0; }
-  thead { display: none; }
-  table, tbody, tr, td { display: block; }
-  tr { background: var(--carte); border: 1px solid var(--trait); border-radius: 10px;
+  .registre-boite table { min-width: 0; }
+  .registre-boite thead { display: none; }
+  .registre-boite table, .registre-boite tbody, .registre-boite tr, .registre-boite td { display: block; }
+  .registre-boite tr { background: var(--carte); border: 1px solid var(--trait); border-radius: 10px;
     padding: 10px 12px 4px; margin-bottom: 10px; }
-  td { border: 0; padding: 0; }
+  .registre-boite td { border: 0; padding: 0; }
   td.c-date, td.c-course { display: inline; }
   td.c-date a { font-weight: 700; }
   td.c-course br { display: none; }
   td.c-course .meta { margin-left: 6px; }
-  td[data-label] { display: flex; justify-content: space-between; align-items: center; gap: 12px;
-    padding: 8px 0; border-top: 1px solid var(--trait); text-align: right; }
-  td[data-label]:first-of-type { margin-top: 8px; }
-  td[data-label]::before { content: attr(data-label); font-size: .74rem; letter-spacing: .06em;
-    text-transform: uppercase; color: var(--doux); text-align: left; white-space: nowrap; }
+  .registre-boite td[data-label] { display: flex; justify-content: space-between; align-items: center;
+    gap: 12px; padding: 8px 0; border-top: 1px solid var(--trait); text-align: right; }
+  .registre-boite td[data-label]::before { content: attr(data-label); font-size: .74rem;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--doux); text-align: left;
+    white-space: nowrap; }
   td .rangee { flex-wrap: wrap; justify-content: flex-end; }
 }
+
+/* onglet Partants (v28.52) */
+.liste-boite { border: 1px solid var(--trait); border-radius: 10px; background: var(--carte);
+  overflow-x: auto; }
+.liste-partants td, .liste-partants th { padding: 9px 8px; }
+.liste-partants th { white-space: normal; }
+.liste-partants .cheval { font-weight: 700; letter-spacing: .01em; }
+.liste-partants .sous { display: block; font-size: .82rem; color: var(--doux); }
+.liste-partants .cote, .liste-partants .ia { text-align: right; white-space: nowrap; }
+.liste-partants tr.np td { color: var(--doux); text-decoration: line-through; }
+.liste-partants tr.np td.ia { text-decoration: none; }
+.liens { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.lien-ext { display: grid; gap: 4px; padding: 14px 16px; border: 1px solid var(--trait);
+  border-radius: 10px; background: var(--carte); text-decoration: none; color: var(--encre); }
+.lien-ext b { color: var(--piste); }
+.lien-ext span { font-size: .86rem; color: var(--doux); }
+.partants .nom { font-size: .66rem; line-height: 1.15; color: var(--doux); text-align: center;
+  max-width: 76px; overflow-wrap: anywhere; }
 
 /* pages de texte */
 .texte { display: grid; gap: 18px; padding-block: 28px; max-width: 72ch; }
