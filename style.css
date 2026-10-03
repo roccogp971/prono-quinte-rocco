@@ -120,6 +120,8 @@ td .rangee { flex-wrap: nowrap; }
 .etat.place { background: var(--piste-clair); color: var(--encre); box-shadow: inset 0 0 0 1px var(--piste); }
 .etat.non { color: var(--doux); box-shadow: inset 0 0 0 1px var(--trait); }
 .etat.attente { color: var(--doux); font-style: italic; }
+.etat.tard { color: var(--perte); box-shadow: inset 0 0 0 1px var(--perte); font-weight: 600; }
+.meta.tard { color: var(--perte); font-size: .8rem; white-space: nowrap; }
 .mont { text-align: right; white-space: nowrap; }
 .mont.perte { color: var(--perte); }
 /* téléphone : chaque course devient une fiche (plus de tableau à faire défiler) */
