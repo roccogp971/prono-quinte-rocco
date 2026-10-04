@@ -79,7 +79,10 @@
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (d) {
       var n = d && (d.count || d.count_unique);
-      if (n) { el.textContent = n + " visites depuis l'ouverture du site"; el.hidden = false; }
+      if (!n) return;
+      n = String(n).replace(/,/g, "\u202f");  // v28.55 — « 1,234 » (anglais) → « 1 234 »
+      el.textContent = n + (n === "1" ? " visite" : " visites") + " depuis l'ouverture du site";  // v28.55
+      el.hidden = false;
     })
     .catch(function () {});
 })();
