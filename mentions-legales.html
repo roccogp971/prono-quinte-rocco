@@ -6,7 +6,7 @@
 <title>Mentions légales — Prono Quinté Rocco</title>
 <meta name="description" content="Éditeur, hébergeur, données personnelles et jeu responsable.">
 <link rel="canonical" href="https://roccogp971.github.io/prono-quinte-rocco/mentions-legales.html">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=4e8c7980">
 </head>
 <body>
 <div class="page">
@@ -25,8 +25,12 @@
   <p>GitHub, Inc. (service GitHub Pages), 88 Colin P Kelly Jr Street,
   San Francisco, CA 94107, États-Unis.</p>
   <h2>Données personnelles et cookies</h2>
-  <p>Ce site ne dépose aucun cookie, n'utilise aucun outil de mesure d'audience et
-  ne collecte aucune donnée personnelle. Il ne charge aucune ressource extérieure.</p>
+  <p>Ce site ne dépose aucun cookie et ne collecte aucune donnée personnelle.
+  Il compte ses visites avec GoatCounter (goatcounter.com), un outil de mesure
+  d'audience sans cookie qui ne garde aucune donnée permettant d'identifier un
+  visiteur : il enregistre seulement, de façon anonyme, les pages vues, le site
+  d'où vient le visiteur, le type d'appareil et le pays. Ces statistiques servent
+  uniquement à savoir combien de personnes lisent le site.</p>
   <h2>Contenus</h2>
   <p>Les pronostics sont des opinions publiées à titre d'information. Ils ne
   constituent ni un conseil, ni une incitation à jouer, et ne garantissent aucun
@@ -49,7 +53,22 @@
   <p>Site personnel et indépendant, sans lien avec le PMU. Les pronostics sont
   publiés à titre d'information : ils ne garantissent aucun gain.
   <a href="mentions-legales.html">Mentions légales</a></p>
+  <p class="compteur" id="compteur-visites" hidden></p>
 </footer>
 </div>
+<script data-goatcounter="https://prono-quinte-rocco.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function () {
+  var el = document.getElementById("compteur-visites");
+  if (!el || !window.fetch) return;
+  fetch("https://prono-quinte-rocco.goatcounter.com/counter/TOTAL.json")
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      var n = d && (d.count || d.count_unique);
+      if (n) { el.textContent = n + " visites depuis l'ouverture du site"; el.hidden = false; }
+    })
+    .catch(function () {});
+})();
+</script>
 </body>
 </html>

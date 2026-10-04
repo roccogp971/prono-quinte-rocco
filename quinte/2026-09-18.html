@@ -6,7 +6,7 @@
 <title>Pronostic Quinté+ du vendredi 18 septembre 2026 à Vincennes — Prono Quinté Rocco</title>
 <meta name="description" content="Prono Quinté+ du vendredi 18 septembre 2026 (Vincennes) : top 8, arrivée officielle et rapports PMU.fr.">
 <link rel="canonical" href="https://roccogp971.github.io/prono-quinte-rocco/quinte/2026-09-18.html">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../style.css?v=4e8c7980">
 </head>
 <body>
 <div class="page">
@@ -44,7 +44,22 @@
   <p>Site personnel et indépendant, sans lien avec le PMU. Les pronostics sont
   publiés à titre d'information : ils ne garantissent aucun gain.
   <a href="../mentions-legales.html">Mentions légales</a></p>
+  <p class="compteur" id="compteur-visites" hidden></p>
 </footer>
 </div>
+<script data-goatcounter="https://prono-quinte-rocco.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function () {
+  var el = document.getElementById("compteur-visites");
+  if (!el || !window.fetch) return;
+  fetch("https://prono-quinte-rocco.goatcounter.com/counter/TOTAL.json")
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      var n = d && (d.count || d.count_unique);
+      if (n) { el.textContent = n + " visites depuis l'ouverture du site"; el.hidden = false; }
+    })
+    .catch(function () {});
+})();
+</script>
 </body>
 </html>

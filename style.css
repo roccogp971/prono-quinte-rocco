@@ -207,6 +207,7 @@ td .rangee { flex-wrap: nowrap; }
 .majeur { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
   border: 2px solid var(--encre); color: var(--encre); font-weight: 700; font-size: .85rem; }
 .pied .ligne { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.compteur { font-size: .82rem; color: var(--doux); font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: no-preference) {
   .carte-course { animation: entree .35s ease-out both; }
   @keyframes entree { from { transform: translateY(6px); } to { transform: none; } }
