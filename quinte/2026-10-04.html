@@ -6,12 +6,12 @@
 <title>Pronostic Quinté+ du dimanche 4 octobre 2026 à ParisLongchamp — Prono Quinté Rocco</title>
 <meta name="description" content="Prono Quinté+ du dimanche 4 octobre 2026 (ParisLongchamp) : top 8, arrivée officielle et rapports PMU.fr.">
 <link rel="canonical" href="https://roccogp971.github.io/prono-quinte-rocco/quinte/2026-10-04.html">
-<link rel="stylesheet" href="../style.css?v=4e8c7980">
+<link rel="stylesheet" href="../style.css?v=fb4f0a29">
 </head>
 <body>
 <div class="page">
 <header class="entete">
-  <a class="marque" href="../index.html"><span class="tapis plein">R</span><b>Prono Quinté Rocco</b></a>
+  <a class="marque" href="../index.html"><span class="tapis plein">R</span><span class="marque-nom"><b>Prono Quinté Rocco</b><span class="compteur" id="compteur-visites" hidden title="Visites depuis l'ouverture du site (GoatCounter, sans cookie)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="n"></span></span></span></a>
   <nav aria-label="Menu"><a href="../index.html">Prono du jour</a><a href="../partants.html">Partants</a><a href="../resultats.html">Résultats</a><a href="../methode.html">La méthode</a><a href="../mentions-legales.html">Mentions légales</a></nav>
 </header>
 <main>
@@ -43,7 +43,6 @@
   <p>Site personnel et indépendant, sans lien avec le PMU. Les pronostics sont
   publiés à titre d'information : ils ne garantissent aucun gain.
   <a href="../mentions-legales.html">Mentions légales</a></p>
-  <p class="compteur" id="compteur-visites" hidden></p>
 </footer>
 </div>
 <script data-goatcounter="https://prono-quinte-rocco.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -51,13 +50,16 @@
 (function () {
   var el = document.getElementById("compteur-visites");
   if (!el || !window.fetch) return;
-  fetch("https://prono-quinte-rocco.goatcounter.com/counter/TOTAL.json")
+  // v28.56 — « no-cache » : un refus ou une panne passagère de GoatCounter
+  // n'est pas gardé 4 h par le navigateur (le compteur restait caché)
+  fetch("https://prono-quinte-rocco.goatcounter.com/counter/TOTAL.json", { cache: "no-cache" })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (d) {
       var n = d && (d.count || d.count_unique);
       if (!n) return;
       n = String(n).replace(/,/g, "\u202f");  // v28.55 — « 1,234 » (anglais) → « 1 234 »
-      el.textContent = n + (n === "1" ? " visite" : " visites") + " depuis l'ouverture du site";  // v28.55
+      var t = el.querySelector(".n") || el;  // v28.56 — le texte va à côté de l'œil
+      t.textContent = n + (n === "1" ? " visite" : " visites");  // v28.56 — court : il est dans l'entête
       el.hidden = false;
     })
     .catch(function () {});

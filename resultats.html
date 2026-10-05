@@ -6,12 +6,12 @@
 <title>Tous les résultats du prono Quinté+ — Prono Quinté Rocco</title>
 <meta name="description" content="Registre complet des pronostics Quinté+ : top 8, arrivée, chevaux trouvés et rendement réel avec les rapports PMU.fr.">
 <link rel="canonical" href="https://roccogp971.github.io/prono-quinte-rocco/resultats.html">
-<link rel="stylesheet" href="style.css?v=4e8c7980">
+<link rel="stylesheet" href="style.css?v=fb4f0a29">
 </head>
 <body>
 <div class="page">
 <header class="entete">
-  <a class="marque" href="index.html"><span class="tapis plein">R</span><b>Prono Quinté Rocco</b></a>
+  <a class="marque" href="index.html"><span class="tapis plein">R</span><span class="marque-nom"><b>Prono Quinté Rocco</b><span class="compteur" id="compteur-visites" hidden title="Visites depuis l'ouverture du site (GoatCounter, sans cookie)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="n"></span></span></span></a>
   <nav aria-label="Menu"><a href="index.html">Prono du jour</a><a href="partants.html">Partants</a><a href="resultats.html" aria-current="page">Résultats</a><a href="methode.html">La méthode</a><a href="mentions-legales.html">Mentions légales</a></nav>
 </header>
 <main>
@@ -27,6 +27,11 @@
     <thead><tr><th>Date</th><th>Course</th><th>Top 8 du prono</th><th>Arrivée</th>
     <th>Trouvés</th><th>1er du prono</th><th class="mont">Quinté+ top 8<br>(mise 112 €)</th></tr></thead>
     <tbody><tr>
+  <td class="c-date"><a href="quinte/2026-10-05.html">05/10</a></td>
+  <td class="c-course">Enghien-Soisy<br><span class="meta">R1C1 · Attelé</span></td>
+  <td data-label="Top 8 du prono"><div class="rangee"><span class="tapis petit">9</span><span class="tapis petit">5</span><span class="tapis petit">12</span><span class="tapis petit">8</span><span class="tapis petit">11</span><span class="tapis petit">13</span><span class="tapis petit">3</span><span class="tapis petit">7</span></div></td><td data-label="Arrivée"><span class="etat attente">en attente</span></td>
+  <td class="num" data-label="Trouvés">—</td><td data-label="1er du prono"><span class="etat attente">—</span></td><td class="mont" data-label="Quinté+ top 8 (mise 112 €)">—</td>
+</tr><tr>
   <td class="c-date"><a href="quinte/2026-10-04.html">04/10</a></td>
   <td class="c-course">ParisLongchamp<br><span class="meta">R1C5 · Plat</span></td>
   <td data-label="Top 8 du prono"><div class="rangee"><span class="tapis plein petit">1</span><span class="tapis plein petit">16</span><span class="tapis plein petit">9</span><span class="tapis petit">14</span><span class="tapis petit">11</span><span class="tapis petit">15</span><span class="tapis plein petit">10</span><span class="tapis petit">12</span></div></td><td data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">1</span><span class="tapis creux petit" title="2e">7</span><span class="tapis plein petit" title="3e">16</span><span class="tapis plein petit" title="4e">10</span><span class="tapis plein petit" title="5e">9</span></div></td>
@@ -173,7 +178,6 @@
   <p>Site personnel et indépendant, sans lien avec le PMU. Les pronostics sont
   publiés à titre d'information : ils ne garantissent aucun gain.
   <a href="mentions-legales.html">Mentions légales</a></p>
-  <p class="compteur" id="compteur-visites" hidden></p>
 </footer>
 </div>
 <script data-goatcounter="https://prono-quinte-rocco.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -181,13 +185,16 @@
 (function () {
   var el = document.getElementById("compteur-visites");
   if (!el || !window.fetch) return;
-  fetch("https://prono-quinte-rocco.goatcounter.com/counter/TOTAL.json")
+  // v28.56 — « no-cache » : un refus ou une panne passagère de GoatCounter
+  // n'est pas gardé 4 h par le navigateur (le compteur restait caché)
+  fetch("https://prono-quinte-rocco.goatcounter.com/counter/TOTAL.json", { cache: "no-cache" })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (d) {
       var n = d && (d.count || d.count_unique);
       if (!n) return;
       n = String(n).replace(/,/g, "\u202f");  // v28.55 — « 1,234 » (anglais) → « 1 234 »
-      el.textContent = n + (n === "1" ? " visite" : " visites") + " depuis l'ouverture du site";  // v28.55
+      var t = el.querySelector(".n") || el;  // v28.56 — le texte va à côté de l'œil
+      t.textContent = n + (n === "1" ? " visite" : " visites");  // v28.56 — court : il est dans l'entête
       el.hidden = false;
     })
     .catch(function () {});

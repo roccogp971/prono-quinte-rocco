@@ -207,7 +207,13 @@ td .rangee { flex-wrap: nowrap; }
 .majeur { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
   border: 2px solid var(--encre); color: var(--encre); font-weight: 700; font-size: .85rem; }
 .pied .ligne { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-.compteur { font-size: .82rem; color: var(--doux); font-variant-numeric: tabular-nums; }
+.marque-nom { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }  /* v28.56 */
+.compteur { display: inline-flex; align-items: center; gap: 5px; padding: 2px 10px 2px 8px;  /* v28.56 — pastille visible */
+  border-radius: 999px; background: var(--piste-clair); color: var(--piste);
+  font-size: .8rem; font-weight: 600; letter-spacing: .01em; text-transform: none;
+  font-variant-numeric: tabular-nums; line-height: 1.5; }
+.compteur svg { width: 15px; height: 15px; flex: none; }
+.compteur[hidden] { display: none; }  /* v28.56 — sinon « display » l'emporte sur hidden */
 @media (prefers-reduced-motion: no-preference) {
   .carte-course { animation: entree .35s ease-out both; }
   @keyframes entree { from { transform: translateY(6px); } to { transform: none; } }
