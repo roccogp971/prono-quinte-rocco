@@ -214,6 +214,14 @@ td .rangee { flex-wrap: nowrap; }
   font-variant-numeric: tabular-nums; line-height: 1.5; }
 .compteur svg { width: 15px; height: 15px; flex: none; }
 .compteur[hidden] { display: none; }  /* v28.56 — sinon « display » l'emporte sur hidden */
+/* v28.80 — soutenir le site (dons) : discret, jamais au-dessus du prono */
+.entete nav a.soutenir { color: var(--soie); font-weight: 700; }
+.don { margin-top: 28px; padding: 16px 18px; border: 1px dashed var(--soie); border-radius: 10px;
+  background: var(--soie-clair); display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.don p { margin: 0; flex: 1 1 260px; }
+.bouton-don { display: inline-block; padding: 10px 18px; border-radius: 999px; background: var(--soie);
+  color: #1b1404; font-weight: 700; text-decoration: none; }
+.bouton-don:hover, .bouton-don:focus-visible { filter: brightness(1.08); }
 @media (prefers-reduced-motion: no-preference) {
   .carte-course { animation: entree .35s ease-out both; }
   @keyframes entree { from { transform: translateY(6px); } to { transform: none; } }
