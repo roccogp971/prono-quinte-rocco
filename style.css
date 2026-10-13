@@ -192,6 +192,7 @@ td .rangee { flex-wrap: nowrap; }
 .texte { display: grid; gap: 18px; padding-block: 28px; max-width: 72ch; }
 .texte h2 { margin-top: 10px; }
 .texte ul, .texte ol { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.courriel { white-space: nowrap; font-weight: 700; }   /* v28.89 — adresse e-mail jamais coupée au « - » */
 .legende { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .85rem; color: var(--doux);
   align-items: center; }
 .legende > span { display: inline-flex; align-items: center; gap: 6px; }
