@@ -222,6 +222,15 @@ td .rangee { flex-wrap: nowrap; }
 .bouton-don { display: inline-block; padding: 10px 18px; border-radius: 999px; background: var(--soie);
   color: #1b1404; font-weight: 700; text-decoration: none; }
 .bouton-don:hover, .bouton-don:focus-visible { filter: brightness(1.08); }
+/* v28.84 — suivre (YouTube) et soutenir (dons) : bien visibles, juste SOUS le prono du jour */
+.suivre { margin: 22px 0 6px; padding: 16px 18px; border: 2px solid var(--soie); border-radius: 12px;
+  background: var(--soie-clair); display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.suivre p { margin: 0; flex: 1 1 100%; font-size: .92rem; color: var(--doux); }
+.bouton-yt { display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; border-radius: 999px;
+  background: #c4111a; color: #fff; font-weight: 700; text-decoration: none; }
+.bouton-yt:hover, .bouton-yt:focus-visible { filter: brightness(1.12); }
+.bouton-yt .lecture { width: 0; height: 0; border-left: 12px solid #fff; border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent; }
 @media (prefers-reduced-motion: no-preference) {
   .carte-course { animation: entree .35s ease-out both; }
   @keyframes entree { from { transform: translateY(6px); } to { transform: none; } }
