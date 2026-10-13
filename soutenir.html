@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soutenir le site — Prono Quinté Rocco</title>
+<meta name="description" content="Un site gratuit et sans publicité : comment le soutenir, et ce qu&#x27;un don ne change pas.">
+<link rel="canonical" href="https://prono-quinte-rocco.fr/soutenir.html">
+<link rel="stylesheet" href="style.css?v=9ac79f81">
+<meta property="og:site_name" content="Prono Quinté Rocco">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Soutenir le site — Prono Quinté Rocco">
+<meta property="og:description" content="Un site gratuit et sans publicité : comment le soutenir, et ce qu&#x27;un don ne change pas.">
+<meta property="og:url" content="https://prono-quinte-rocco.fr/soutenir.html">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<div class="page">
+<header class="entete">
+  <a class="marque" href="index.html"><span class="tapis plein">R</span><span class="marque-nom"><b>Prono Quinté Rocco</b><span class="compteur" id="compteur-visites" hidden title="Visites depuis l'ouverture du site (GoatCounter, sans cookie)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="n"></span></span></span></a>
+  <nav aria-label="Menu"><a href="index.html">Prono du jour</a><a href="partants.html">Partants</a><a href="resultats.html">Résultats</a><a href="methode.html">La méthode</a><a href="mentions-legales.html">Mentions légales</a><a class="soutenir" href="soutenir.html" aria-current="page">💛 Soutenir</a></nav>
+</header>
+<main>
+<section class="texte">
+  <p class="surtitre">Soutenir le site</p>
+  <h1>Un site gratuit, sans publicité</h1>
+  <p class="chapo">Prono Quinté Rocco est un projet personnel : chaque matin, un pronostic du
+  Quinté+ publié avant le départ, puis comparé à l'arrivée officielle, sans rien
+  cacher des mauvais jours.</p>
+  <p>Si ce travail vous plaît, vous pouvez le soutenir par un don. Il aide à payer
+  ce que coûte le site : l'intelligence artificielle qui analyse les courses,
+  l'hébergement, le nom de domaine.</p>
+  <p><a class="bouton-don" href="https://fr.tipeee.com/prono-quinte-rocco" target="_blank" rel="noopener">💛 Faire un don sur Tipeee</a></p>
+  <h2>À savoir avant de donner</h2>
+  <ul>
+    <li>Un don est <strong>entièrement facultatif</strong> : le site reste gratuit et
+    identique pour tout le monde.</li>
+    <li>Il ne donne accès à <strong>aucun pronostic supplémentaire</strong> ou « privé ».</li>
+    <li>Il ne rend pas les pronostics plus fiables : ils ne garantissent <strong>aucun gain</strong>.</li>
+    <li>Ne donnez jamais l'argent destiné à vos paris, ni une somme que vous ne
+    pouvez pas vous permettre de dépenser.</li>
+    <li>Le paiement se fait sur Tipeee : ce site ne voit et ne garde aucune donnée bancaire.</li>
+    <li>Réservé aux personnes majeures.</li>
+  </ul>
+</section>
+</main>
+<footer class="pied">
+  <div class="ligne"><span class="majeur" aria-label="Interdit aux mineurs">18+</span>
+  <span><strong>Les jeux d'argent sont interdits aux mineurs.</strong>
+  Jouer comporte des risques : endettement, isolement, dépendance.
+  Pour être aidé, appelez le <strong>09 74 75 13 13</strong> (appel non surtaxé).</span></div>
+  <p>Site personnel et indépendant, sans lien avec le PMU. Les pronostics sont
+  publiés à titre d'information : ils ne garantissent aucun gain.
+  <a href="mentions-legales.html">Mentions légales</a> · <a href="soutenir.html">Soutenir le site</a> · <a href="https://www.youtube.com/@Prono-Quinte-Rocco" target="_blank" rel="noopener">Chaîne YouTube</a></p>
+</footer>
+</div>
+<script data-goatcounter="https://prono-quinte-rocco.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function () {
+  var el = document.getElementById("compteur-visites");
+  if (!el || !window.fetch) return;
+  // v28.56 — « no-cache » : un refus ou une panne passagère de GoatCounter
+  // n'est pas gardé 4 h par le navigateur (le compteur restait caché)
+  fetch("https://prono-quinte-rocco.goatcounter.com/counter/TOTAL.json", { cache: "no-cache" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      var n = d && (d.count || d.count_unique);
+      if (!n) return;
+      n = String(n).replace(/,/g, "\u202f");  // v28.55 — « 1,234 » (anglais) → « 1 234 »
+      var t = el.querySelector(".n") || el;  // v28.56 — le texte va à côté de l'œil
+      t.textContent = n + (n === "1" ? " visite" : " visites");  // v28.56 — court : il est dans l'entête
+      el.hidden = false;
+    })
+    .catch(function () {});
+})();
+</script>
+</body>
+</html>
