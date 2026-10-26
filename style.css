@@ -12,6 +12,8 @@
   --piste-clair: #e1efe6;
   --soie: #c98a06;        /* or casaque : rare, pour l'arrivée */
   --soie-clair: #fbefd2;
+  --arrivee: #fcf4de;     /* v29.00 — fond du RÉSULTAT officiel (doré très clair) */
+  --arrivee-trait: #ead39c;  /* v29.00 — ses traits */
   --perte: #9a3b2e;
   --titre: "Bahnschrift", "DIN Alternate", "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
   --texte: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -21,12 +23,14 @@
     --fond: #0d1611; --carte: #15211a; --encre: #e3ebe5; --doux: #9fb2a5;
     --trait: #2a3a30; --piste: #5cc08a; --piste-clair: #193826;
     --soie: #f0bf45; --soie-clair: #3a2f12; --perte: #e48a7a; color-scheme: dark;
+    --arrivee: #262012; --arrivee-trait: #54451c;   /* v29.00 */
   }
 }
 :root[data-theme="dark"] {
   --fond: #0d1611; --carte: #15211a; --encre: #e3ebe5; --doux: #9fb2a5;
   --trait: #2a3a30; --piste: #5cc08a; --piste-clair: #193826;
   --soie: #f0bf45; --soie-clair: #3a2f12; --perte: #e48a7a; color-scheme: dark;
+  --arrivee: #262012; --arrivee-trait: #54451c;   /* v29.00 */
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -66,6 +70,9 @@ nav a[aria-current="page"] { color: var(--encre); font-weight: 600;
 .tapis.creux.plein { color: var(--carte); background: var(--piste); border-color: var(--soie);
   border-width: 2px; }
 .tapis.petit { width: 30px; height: 30px; font-size: .92rem; border-radius: 5px; }
+/* v29.00 — arrivé dans les 5 premiers, mais PAS dans mon top 8 : grisé (avant :
+   pointillés, qui veulent aussi dire « complémentaire » → confusion dans la carte) */
+.tapis.hors { background: var(--carte); border: 1px solid var(--doux); color: var(--doux); }
 
 /* carte du prono */
 .une { display: grid; gap: 14px; padding-block: 28px 8px; }
@@ -85,6 +92,20 @@ nav a[aria-current="page"] { color: var(--encre); font-weight: 600;
 .note { display: inline-flex; gap: 3px; vertical-align: middle; }
 .note i { width: 9px; height: 9px; border-radius: 50%; background: var(--trait); }
 .note i.on { background: var(--piste); }
+/* v29.00 — la carte en DEUX TEMPS : « Mon top 8 » (publié avant la course),
+   puis « Arrivée officielle » sur fond doré (après). Le doré = le résultat. */
+.zone-prono, .zone-arrivee { display: grid; gap: 12px; }
+.zone-titre { font-size: 1.05rem; }
+.zone-tete { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.zone-tete .zone-titre { margin-right: 4px; }
+.zone-arrivee { margin: 2px -18px -18px; padding: 14px 18px 18px; background: var(--arrivee);
+  border-top: 3px solid var(--soie); border-radius: 0 0 9px 9px; }
+.zone-arrivee .partants { grid-template-columns: repeat(5, minmax(0, 1fr)); max-width: 390px; }
+.zone-arrivee .etat.non { background: var(--carte); }
+.zone-arrivee.attente { background: none; border-top: 2px dashed var(--arrivee-trait);
+  padding-block: 12px 14px; color: var(--doux); font-size: .92rem; }
+.carte-course.rapports { background: var(--arrivee); border-color: var(--arrivee-trait);
+  border-top: 3px solid var(--soie); }
 
 /* tableau d'affichage */
 .bilan { margin-top: 36px; display: grid; gap: 14px; }
@@ -119,7 +140,7 @@ tr:last-child td { border-bottom: 0; }
 td .rangee { flex-wrap: nowrap; }
 .etat { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .8rem;
   font-weight: 600; white-space: nowrap; }
-.etat.gagne { background: var(--soie-clair); color: var(--encre); box-shadow: inset 0 0 0 1px var(--soie); }
+.etat.gagne { background: var(--soie); color: #1b1404; }   /* v29.00 — or plein : lisible sur le fond doré */
 .etat.place { background: var(--piste-clair); color: var(--encre); box-shadow: inset 0 0 0 1px var(--piste); }
 .etat.non { color: var(--doux); box-shadow: inset 0 0 0 1px var(--trait); }
 .etat.attente { color: var(--doux); font-style: italic; }
@@ -127,25 +148,50 @@ td .rangee { flex-wrap: nowrap; }
 .meta.tard { color: var(--perte); font-size: .8rem; white-space: nowrap; }
 .mont { text-align: right; white-space: nowrap; }
 .mont.perte { color: var(--perte); }
+/* v29.00 — registre : à gauche MON PRONO, à droite LE RÉSULTAT OFFICIEL sur
+   fond doré, séparés par un trait or ; les numéros de mon top 8 non arrivés
+   sont plus discrets (les verts ressortent : c'était « un peu touffu ») */
+.registre-boite th.res, .registre-boite td.res { background: var(--arrivee); }
+.registre-boite td.res { border-bottom-color: var(--arrivee-trait); }
+.registre-boite th.c-arr, .registre-boite td.c-arr, .registre-boite th.g-res { border-left: 3px solid var(--soie); }
+.registre-boite tr.groupes th { border-bottom: 0; padding-block: 12px 2px; font-size: .8rem; letter-spacing: .06em; }
+.registre-boite th.g-prono { color: var(--piste); }
+.registre-boite th.g-res { color: var(--encre); }
+.registre-boite td.c-top8 .tapis:not(.plein) { border: 1px solid var(--doux); }
+.registre-boite td .etat.non { background: var(--carte); }
 /* téléphone : chaque course devient une fiche (plus de tableau à faire défiler) */
 @media (max-width: 980px) {
+  /* v29.00 — une fiche par course : date + course, MON TOP 8 sur une ligne,
+     puis LE RÉSULTAT en un seul bloc doré (avant : 5 lignes pareilles) */
   .registre-boite { overflow: visible; border: 0; background: none; border-radius: 0; }
   .registre-boite table { min-width: 0; }
   .registre-boite thead { display: none; }
-  .registre-boite table, .registre-boite tbody, .registre-boite tr, .registre-boite td { display: block; }
-  .registre-boite tr { background: var(--carte); border: 1px solid var(--trait); border-radius: 10px;
-    padding: 10px 12px 4px; margin-bottom: 10px; }
-  .registre-boite td { border: 0; padding: 0; }
-  td.c-date, td.c-course { display: inline; }
+  .registre-boite table, .registre-boite tbody { display: block; }
+  .registre-boite tr { display: flex; flex-wrap: wrap; align-items: baseline;
+    background: var(--carte); border: 1px solid var(--trait); border-radius: 10px;
+    padding: 10px 12px 12px; margin-bottom: 10px; }
+  .registre-boite td { display: block; flex: 1 1 100%; border: 0; padding: 0; }
+  .registre-boite td.c-date { flex: 0 0 auto; margin-right: 8px; }
+  .registre-boite td.c-course { flex: 1 1 12em; min-width: 0; }   /* trop étroit à côté de la date : passe dessous */
   td.c-date a { font-weight: 700; }
   td.c-course br { display: none; }
   td.c-course .meta { margin-left: 6px; }
-  .registre-boite td[data-label] { display: flex; justify-content: space-between; align-items: center;
-    gap: 12px; padding: 8px 0; border-top: 1px solid var(--trait); text-align: right; }
-  .registre-boite td[data-label]::before { content: attr(data-label); font-size: .74rem;
-    letter-spacing: .06em; text-transform: uppercase; color: var(--doux); text-align: left;
-    white-space: nowrap; }
-  td .rangee { flex-wrap: wrap; justify-content: flex-end; }
+  .registre-boite td[data-label]::before { content: attr(data-label); font-size: .82rem;
+    color: var(--doux); text-align: left; white-space: nowrap; }
+  .registre-boite td.c-top8 { padding: 10px 0 12px; }
+  .registre-boite td.c-top8::before { display: block; margin-bottom: 6px; }
+  .registre-boite td.res { display: flex; justify-content: space-between; align-items: center;
+    gap: 8px; padding: 7px 10px; text-align: right; }
+  .registre-boite td.c-arr { border-left: 0; border-top: 3px solid var(--soie); border-radius: 8px 8px 0 0; }
+  .registre-boite td.c-trouves, .registre-boite td.c-premier { flex: 1 1 40%;
+    border-top: 1px solid var(--arrivee-trait); }
+  .registre-boite td.c-premier { border-left: 1px solid var(--arrivee-trait); }
+  .registre-boite td.c-mont { border-top: 1px solid var(--arrivee-trait); border-radius: 0 0 8px 8px; }
+  .registre-boite tr.attente td.c-arr { border-radius: 8px; }
+  .registre-boite tr.attente td.c-trouves, .registre-boite tr.attente td.c-premier,
+  .registre-boite tr.attente td.c-mont { display: none; }
+  td .rangee { flex-wrap: nowrap; justify-content: flex-end; }
+  td.c-top8 .rangee { justify-content: flex-start; }
 }
 
 /* onglet Partants (v28.52) — fiche de la course (v28.53) */
