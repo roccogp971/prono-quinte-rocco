@@ -81,7 +81,7 @@ nav a[aria-current="page"] { color: var(--encre); font-weight: 600;
 .chapo { color: var(--doux); font-size: 1.05rem; }
 .carte-course { background: var(--carte); border: 1px solid var(--trait); border-radius: 10px;
   padding: 18px; display: grid; gap: 16px; }
-.carte-course .tete { display: flex; flex-wrap: wrap; justify-content: space-between;
+.carte-course .tete { display: flex; flex-wrap: wrap; justify-content: flex-start;   /* v29.02 — la pastille du type juste après le titre */
   align-items: baseline; gap: 6px 16px; }
 .meta { color: var(--doux); font-size: .95rem; }
 .partants { list-style: none; margin: 0; padding: 0; display: grid;
@@ -106,6 +106,22 @@ nav a[aria-current="page"] { color: var(--encre); font-weight: 600;
   padding-block: 12px 14px; color: var(--doux); font-size: .92rem; }
 .carte-course.rapports { background: var(--arrivee); border-color: var(--arrivee-trait);
   border-top: 3px solid var(--soie); }
+/* v29.02 — TYPE DE COURSE (demande de Rocco du 03/11) : une couleur par type,
+   les mêmes que la miniature et la vidéo — trot = froid (attelé bleu, monté
+   violet), plat = vert gazon, obstacle = chaud (haies orange, steeple rouge,
+   cross rose). Texte blanc ou foncé : contraste ≥ 4,5:1. */
+.type { display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: .78rem;
+  font-weight: 700; letter-spacing: .06em; text-transform: uppercase; line-height: 1.45;
+  white-space: nowrap; vertical-align: middle; color: #fff; }
+.type.petit { padding: 1px 8px; font-size: .7rem; letter-spacing: .04em; margin-left: 6px; }
+.t-attele { background: #2f6cc8; }
+.t-monte { background: #8056d6; }
+.t-plat { background: #409e3e; color: #14100a; }
+.t-haies, .t-obstacle { background: #ee8c24; color: #14100a; }
+.t-steeple { background: #d03a34; }
+.t-cross { background: #be3a80; }
+.carte-course .tete .type { align-self: center; font-size: .84rem; padding: 4px 14px; }
+.fiche-course .meta .type { margin-right: 8px; }
 
 /* tableau d'affichage */
 .bilan { margin-top: 36px; display: grid; gap: 14px; }
