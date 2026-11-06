@@ -157,6 +157,7 @@ td .rangee { flex-wrap: nowrap; }
 .etat { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .8rem;
   font-weight: 600; white-space: nowrap; }
 .etat.gagne { background: var(--soie); color: #1b1404; }   /* v29.00 — or plein : lisible sur le fond doré */
+.etat.top { background: var(--piste); color: var(--carte); }   /* v29.03 — 5/5 : vert plein */
 .etat.place { background: var(--piste-clair); color: var(--encre); box-shadow: inset 0 0 0 1px var(--piste); }
 .etat.non { color: var(--doux); box-shadow: inset 0 0 0 1px var(--trait); }
 .etat.attente { color: var(--doux); font-style: italic; }
@@ -164,6 +165,13 @@ td .rangee { flex-wrap: nowrap; }
 .meta.tard { color: var(--perte); font-size: .8rem; white-space: nowrap; }
 .mont { text-align: right; white-space: nowrap; }
 .mont.perte { color: var(--perte); }
+/* v29.03 — CODE COULEUR de l'argent, partout la même règle : VERT = a rapporté
+   plus que la mise, ROUGE = moins (demande de Rocco du 05/11) */
+.mont.gain, .kv dd.gain, .case .gros.gain { color: var(--piste); }
+.mont.gain { font-weight: 700; }
+.kv dd.perte { color: var(--perte); }
+.c-lis, .lisib { white-space: nowrap; }   /* v29.03 — « lisibilité ●●●○○ 3/5 » jamais coupé (registre, carte) */
+th.mont small { font-size: .72rem; letter-spacing: 0; text-transform: none; white-space: nowrap; }   /* v29.03 — plus de « €) » seul */
 /* v29.00 — registre : à gauche MON PRONO, à droite LE RÉSULTAT OFFICIEL sur
    fond doré, séparés par un trait or ; les numéros de mon top 8 non arrivés
    sont plus discrets (les verts ressortent : c'était « un peu touffu ») */
@@ -175,8 +183,16 @@ td .rangee { flex-wrap: nowrap; }
 .registre-boite th.g-res { color: var(--encre); }
 .registre-boite td.c-top8 .tapis:not(.plein) { border: 1px solid var(--doux); }
 .registre-boite td .etat.non { background: var(--carte); }
+/* v29.03 — + colonne « Lisibilité » : cellules un peu plus serrées pour que le
+   tableau tienne dans la page sans défiler (mesuré : 1 017 px → 983 px, place : 1 006 px) */
+@media (min-width: 1041px) {
+  .registre-boite th, .registre-boite td { padding-inline: 6px; }
+  .registre-boite th:first-child, .registre-boite td:first-child { padding-left: 12px; }
+  .registre-boite th:last-child, .registre-boite td:last-child { padding-right: 12px; }
+  .registre-boite th { letter-spacing: .05em; }
+}
 /* téléphone : chaque course devient une fiche (plus de tableau à faire défiler) */
-@media (max-width: 980px) {
+@media (max-width: 1040px) {   /* v29.03 — avant : 980 px (le tableau est plus large d'une colonne) */
   /* v29.00 — une fiche par course : date + course, MON TOP 8 sur une ligne,
      puis LE RÉSULTAT en un seul bloc doré (avant : 5 lignes pareilles) */
   .registre-boite { overflow: visible; border: 0; background: none; border-radius: 0; }
@@ -193,9 +209,11 @@ td .rangee { flex-wrap: nowrap; }
   td.c-course br { display: none; }
   td.c-course .meta { margin-left: 6px; }
   .registre-boite td[data-label]::before { content: attr(data-label); font-size: .82rem;
-    color: var(--doux); text-align: left; white-space: nowrap; }
-  .registre-boite td.c-top8 { padding: 10px 0 12px; }
+    color: var(--doux); text-align: left; white-space: nowrap; font-weight: 400; }   /* v29.03 — ligne « gain » en gras : pas son libellé */
+  .registre-boite td.c-top8 { padding: 10px 0 8px; }   /* v29.03 — la lisibilité suit, juste dessous */
   .registre-boite td.c-top8::before { display: block; margin-bottom: 6px; }
+  .registre-boite td.c-lis { padding: 0 0 12px; }   /* v29.03 — « Lisibilité ●●●○○ 3/5 » sur une ligne */
+  .registre-boite td.c-lis::before { margin-right: 8px; }   /* v29.03 */
   .registre-boite td.res { display: flex; justify-content: space-between; align-items: center;
     gap: 8px; padding: 7px 10px; text-align: right; }
   .registre-boite td.c-arr { border-left: 0; border-top: 3px solid var(--soie); border-radius: 8px 8px 0 0; }
@@ -258,6 +276,10 @@ td .rangee { flex-wrap: nowrap; }
 .legende { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .85rem; color: var(--doux);
   align-items: center; }
 .legende > span { display: inline-flex; align-items: center; gap: 6px; }
+/* v29.03 — légende du registre : une ligne par colonne qui a une couleur */
+.legende.code { display: grid; gap: 4px; }
+.legende.code > div { line-height: 2; }
+.legende.code b { color: var(--encre); font-weight: 600; margin-right: 4px; }
 .deux { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
 .kv { display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; font-size: .95rem; }
 .kv dt { color: var(--doux); }
