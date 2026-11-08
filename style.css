@@ -169,6 +169,8 @@ td .rangee { flex-wrap: nowrap; }
    plus que la mise, ROUGE = moins (demande de Rocco du 05/11) */
 .mont.gain, .kv dd.gain, .case .gros.gain { color: var(--piste); }
 .mont.gain { font-weight: 700; }
+.etat.somme { font-size: .86rem; font-weight: 700; padding: 2px 6px;    /* v29.04 — montant Quinté+ > 112 € SURLIGNÉ */
+  font-variant-numeric: tabular-nums; }   /* (compacte : le tableau tient encore sans défiler, mesuré 990 px pour 1 006) */
 .kv dd.perte { color: var(--perte); }
 .c-lis, .lisib { white-space: nowrap; }   /* v29.03 — « lisibilité ●●●○○ 3/5 » jamais coupé (registre, carte) */
 th.mont small { font-size: .72rem; letter-spacing: 0; text-transform: none; white-space: nowrap; }   /* v29.03 — plus de « €) » seul */
@@ -221,6 +223,7 @@ th.mont small { font-size: .72rem; letter-spacing: 0; text-transform: none; whit
     border-top: 1px solid var(--arrivee-trait); }
   .registre-boite td.c-premier { border-left: 1px solid var(--arrivee-trait); }
   .registre-boite td.c-mont { border-top: 1px solid var(--arrivee-trait); border-radius: 0 0 8px 8px; }
+  .registre-boite td.c-mont::before { white-space: normal; }   /* v29.04 — 320 px : « (mise 112 €) » passe dessous, la pastille tient */
   .registre-boite tr.attente td.c-arr { border-radius: 8px; }
   .registre-boite tr.attente td.c-trouves, .registre-boite tr.attente td.c-premier,
   .registre-boite tr.attente td.c-mont { display: none; }
