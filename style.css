@@ -328,3 +328,31 @@ th.mont small { font-size: .72rem; letter-spacing: 0; text-transform: none; whit
   .carte-course { animation: entree .35s ease-out both; }
   @keyframes entree { from { transform: translateY(6px); } to { transform: none; } }
 }
+
+/* v29.07 — deux jeux : un onglet par jeu, à sa couleur (Quinté+ rouge) */
+:root { --quinte: #c8102e; --quinte-fond: #fde8eb; --quinte-texte: #a50d26;
+  --sp5: #ffc400; --sp5-trait: #d9a300; --sp5-encre: #a3001b; --sp5-fond: #fff6d6; --sp5-texte: #a3001b; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --quinte-fond: #3a1219; --quinte-texte: #ff9aa6;
+    --sp5-fond: #3b3008; --sp5-texte: #ffd54a; }
+}
+:root[data-theme="dark"] { --quinte-fond: #3a1219; --quinte-texte: #ff9aa6;
+  --sp5-fond: #3b3008; --sp5-texte: #ffd54a; }
+.entete.avec-jeux { border-bottom: 0; padding-bottom: 8px; }
+.jeux { display: flex; gap: 8px; border-bottom: 3px solid var(--jeu-actif, var(--encre)); }
+.jeux.j-quinte { --jeu-actif: var(--quinte); }
+.jeux.j-sp5 { --jeu-actif: var(--sp5-trait); }
+.jeu { flex: 1 1 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 48px; padding: 6px 10px; border: 2px solid var(--jeu-bord, var(--jeu)); border-bottom: 0;
+  border-radius: 10px 10px 0 0; background: var(--jeu-fond); color: var(--jeu-texte);
+  text-decoration: none; text-align: center; font-family: var(--titre); font-stretch: condensed;
+  font-weight: 700; font-size: 1.25rem; line-height: 1.15; letter-spacing: .01em; }
+.jeu small { font-family: var(--texte); font-stretch: normal; font-weight: 500; font-size: .74rem; }
+.jeu.actif { background: var(--jeu); color: var(--jeu-sur, #fff); }
+.jeu-quinte { --jeu: var(--quinte); --jeu-fond: var(--quinte-fond); --jeu-texte: var(--quinte-texte); }
+.jeu-sp5 { --jeu: var(--sp5); --jeu-bord: var(--sp5-trait); --jeu-sur: var(--sp5-encre);
+  --jeu-fond: var(--sp5-fond); --jeu-texte: var(--sp5-texte); }
+.jeu:focus-visible { outline: 3px solid var(--soie); outline-offset: 2px; }
+.nobr { white-space: nowrap; }
+.en-bref ul { margin: 10px 0 0; padding-left: 1.2em; max-width: 65ch; }
+.en-bref li { margin-block: 4px; }
