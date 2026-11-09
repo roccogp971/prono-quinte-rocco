@@ -15,6 +15,7 @@
   --arrivee: #fcf4de;     /* v29.00 — fond du RÉSULTAT officiel (doré très clair) */
   --arrivee-trait: #ead39c;  /* v29.00 — ses traits */
   --perte: #9a3b2e;
+  --partiel: #8a4500; --partiel-clair: #fdebd5; --partiel-trait: #d9822b;   /* v29.06 — Quinté+ entre 0 et 112 € */
   --titre: "Bahnschrift", "DIN Alternate", "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
   --texte: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -24,6 +25,7 @@
     --trait: #2a3a30; --piste: #5cc08a; --piste-clair: #193826;
     --soie: #f0bf45; --soie-clair: #3a2f12; --perte: #e48a7a; color-scheme: dark;
     --arrivee: #262012; --arrivee-trait: #54451c;   /* v29.00 */
+    --partiel: #f5b06a; --partiel-clair: #3a2814; --partiel-trait: #b8742f;   /* v29.06 */
   }
 }
 :root[data-theme="dark"] {
@@ -31,6 +33,7 @@
   --trait: #2a3a30; --piste: #5cc08a; --piste-clair: #193826;
   --soie: #f0bf45; --soie-clair: #3a2f12; --perte: #e48a7a; color-scheme: dark;
   --arrivee: #262012; --arrivee-trait: #54451c;   /* v29.00 */
+  --partiel: #f5b06a; --partiel-clair: #3a2814; --partiel-trait: #b8742f;   /* v29.06 */
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -172,6 +175,8 @@ td .rangee { flex-wrap: nowrap; }
 .etat.somme { font-size: .86rem; font-weight: 700; padding: 2px 6px;    /* v29.04 — montant Quinté+ > 112 € SURLIGNÉ */
   font-variant-numeric: tabular-nums; }   /* (compacte : le tableau tient encore sans défiler, mesuré 990 px pour 1 006) */
 .kv dd.perte { color: var(--perte); }
+.etat.partiel { background: var(--partiel-clair); color: var(--partiel);   /* v29.06 — Quinté+ : une partie de la mise */
+  box-shadow: inset 0 0 0 1px var(--partiel-trait); }
 .c-lis, .lisib { white-space: nowrap; }   /* v29.03 — « lisibilité ●●●○○ 3/5 » jamais coupé (registre, carte) */
 th.mont small { font-size: .72rem; letter-spacing: 0; text-transform: none; white-space: nowrap; }   /* v29.03 — plus de « €) » seul */
 /* v29.00 — registre : à gauche MON PRONO, à droite LE RÉSULTAT OFFICIEL sur
