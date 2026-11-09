@@ -356,3 +356,16 @@ th.mont small { font-size: .72rem; letter-spacing: 0; text-transform: none; whit
 .nobr { white-space: nowrap; }
 .en-bref ul { margin: 10px 0 0; padding-left: 1.2em; max-width: 65ch; }
 .en-bref li { margin-block: 4px; }
+/* v29.10 — « Les résultats officiels, tous les jours » (avec ou sans prono) */
+@media (min-width: 1041px) {
+  .registre-boite.officiels table { min-width: 760px; }
+  .registre-boite.officiels td.c-prono { white-space: nowrap; }
+}
+.registre-boite.officiels th.g-res small { font-size: .72rem; letter-spacing: 0; text-transform: none; }
+@media (max-width: 1040px) {
+  .registre-boite.officiels td.c-o, .registre-boite.officiels td.c-sd,
+  .registre-boite.officiels td.c-d { border-top: 1px solid var(--arrivee-trait); }
+  .registre-boite.officiels td.c-d { border-radius: 0 0 8px 8px; }
+  .registre-boite.officiels td.c-prono { display: flex; justify-content: space-between; align-items: center;
+    gap: 8px; padding: 10px 2px 0; white-space: normal; text-align: right; }
+}
