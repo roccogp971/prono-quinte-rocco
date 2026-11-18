@@ -6,7 +6,7 @@
 <title>Résultats du Super Pick 5 : arrivées et rapports officiels de chaque jour — Prono Quinté Rocco</title>
 <meta name="description" content="Tous les résultats du Super Pick 5 (e-Super Pick5) depuis sa création : l&#x27;arrivée et les rapports officiels de chaque jour, et mes pronos publiés avant le départ avec leur rendement réel.">
 <link rel="canonical" href="https://prono-quinte-rocco.fr/superpick5-resultats.html">
-<link rel="stylesheet" href="style.css?v=16feb868">
+<link rel="stylesheet" href="style.css?v=78da19bf">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -21,8 +21,8 @@
 <body>
 <div class="page">
 <header class="entete avec-jeux">
-  <a class="marque" href="index.html"><span class="tapis plein">R</span><span class="marque-nom"><b>Prono Quinté Rocco</b><span class="compteur" id="compteur-visites" hidden title="Visites depuis l'ouverture du site (GoatCounter, sans cookie)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="n"></span></span></span></a>
-  <nav aria-label="Menu"><a href="superpick5.html">Prono du jour</a><a href="superpick5-partants.html">Partants</a><a href="superpick5-resultats.html" aria-current="page">Résultats</a><a href="methode.html">Ma méthode</a><a href="mentions-legales.html">Mentions légales</a><a class="soutenir" href="soutenir.html">💛 Soutenir</a></nav>
+  <a class="marque" href="index.html"><span class="tapis plein">R</span><span class="marque-nom"><b>Prono Quinté Rocco</b><span class="slogan">Quinté+ · Super Pick 5 — pronos gratuits</span><span class="compteur" id="compteur-visites" hidden title="Visites depuis l'ouverture du site (GoatCounter, sans cookie)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="n"></span></span></span></a>
+  <nav aria-label="Menu"><a href="superpick5.html">Prono du jour</a><a href="superpick5-partants.html">Partants</a><a href="superpick5-resultats.html" aria-current="page">Résultats</a><a href="superpick5-stats.html">Stats</a><a href="methode.html">Ma méthode</a><a href="mentions-legales.html">Mentions légales</a><a class="soutenir" href="soutenir.html">💛 Soutenir</a></nav>
 </header>
 <div class="jeux j-sp5" role="navigation" aria-label="Choix du jeu"><a class="jeu jeu-quinte" href="index.html">Quinté+</a><a class="jeu jeu-sp5 actif" href="superpick5.html" aria-current="true">e-Super Pick5<small>entre 17 h et 19 h</small></a></div>
 <main>
@@ -36,6 +36,8 @@
   <p>Les jours où je n'ai pas proposé de prono sont aussi dans le tableau, avec la mention
   « pas de prono proposé ce jour-là » et l'arrivée officielle : cliquez sur la date pour voir
   les rapports. Ces jours-là ne comptent pas dans mon bilan.</p>
+  <p><a class="lien-stats" href="superpick5-stats.html">Voir mes statistiques</a> : par type de course, lisibilité,
+  hippodrome, mois… et les numéros qui sortent le plus.</p>
   <p class="meta">« Après coup » : prono mis en ligne après la course. Il vient du carnet de mon logiciel, qui l'enregistre avant le départ (l'heure d'analyse est affichée), mais seul un prono mis en ligne avant le départ le prouve à un visiteur. Mes pronos du e-Super Pick5 sont en ligne depuis le 9 novembre 2026.</p>
   <div class="legende code">
     <div><b>Numéros</b> <span class="tapis plein petit">4</span> dans mon top 8 et dans les 5 premiers ·
@@ -47,88 +49,97 @@
     <span class="mont perte">en rouge</span> : rien</div>
     <div><b>Lisibilité</b> <span class="note" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span> ma note avant la course, de 1 (course très ouverte) à 5 (claire sur le papier)</div>
   </div>
+  <details class="filtres" id="filtres" data-un="e-Super Pick5" data-plur="e-Super Pick5" data-champ="Super Pick5 top 8" hidden>
+    <summary><span class="f-titre">Filtrer les courses</span><span class="f-compte"></span></summary>
+    <div class="f-grille"><label>Période<select data-f="mois"><option value="">Toutes</option><option value="2026-11" data-lib="novembre 2026">novembre 2026 (14)</option></select></label><label>Type de course<select data-f="type"><option value="">Tous</option><option value="attele" data-lib="Trot attelé">Trot attelé (9)</option><option value="monte" data-lib="Trot monté">Trot monté (1)</option><option value="plat" data-lib="Plat">Plat (3)</option><option value="haies" data-lib="Haies">Haies (1)</option></select></label><label>Hippodrome<select data-f="hip"><option value="">Tous</option><option value="Auteuil" data-lib="Auteuil">Auteuil (1)</option><option value="Bordeaux-Le-Bouscat" data-lib="Bordeaux-Le-Bouscat">Bordeaux-Le-Bouscat (1)</option><option value="Deauville" data-lib="Deauville">Deauville (1)</option><option value="Laval" data-lib="Laval">Laval (1)</option><option value="Mauquenchy" data-lib="Mauquenchy">Mauquenchy (1)</option><option value="Reims" data-lib="Reims">Reims (1)</option><option value="Saint-Cloud" data-lib="Saint-Cloud">Saint-Cloud (1)</option><option value="Toulouse" data-lib="Toulouse">Toulouse (1)</option><option value="Vincennes" data-lib="Vincennes">Vincennes (6)</option></select></label><label>Lisibilité<select data-f="lis"><option value="">Toutes</option><option value="2" data-lib="2/5">2/5 (9)</option><option value="3" data-lib="3/5">3/5 (2)</option><option value="4" data-lib="4/5">4/5 (1)</option></select></label><label>Trouvés<select data-f="tr"><option value="">Tous</option><option value="5" data-lib="5/5">5/5 (3)</option><option value="4" data-lib="4/5">4/5 (7)</option><option value="3" data-lib="3/5">3/5 (2)</option><option value="0-2" data-lib="2/5 ou moins">2/5 ou moins (0)</option></select></label><label>Mon 1er<select data-f="p1"><option value="">Tous</option><option value="pg" data-lib="gagnant ou placé">gagnant ou placé (7)</option><option value="gagnant" data-lib="gagnant">gagnant (1)</option><option value="place" data-lib="placé">placé (6)</option><option value="non" data-lib="non placé">non placé (5)</option></select></label><label>Super Pick5 top 8<select data-f="cg"><option value="">Tous</option><option value="gain" data-lib="plus que la mise">plus que la mise (2)</option><option value="partiel" data-lib="une partie de la mise">une partie de la mise (1)</option><option value="perte" data-lib="rien">rien (9)</option></select></label><div class="f-bouton"><button type="button" class="f-raz">Réinitialiser</button></div></div>
+    <p class="f-pied">Un groupe choisi après coup peut sembler gagnant par simple hasard : sous 30 courses, il ne
+    prouve rien. Et « Trouvés », « Mon 1er » et « Super Pick5 top 8 » retiennent les courses selon leur résultat : on ne le
+    connaît qu'après l'arrivée.</p>
+  </details>
+  <p class="f-bilan" id="f-bilan" aria-live="polite" hidden></p>
+  <div class="tri-barre" id="tri-barre" hidden><span class="tri-lib">Trier :</span><button type="button" class="tri-pastille" data-tri="jour" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Date<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><button type="button" class="tri-pastille" data-tri="hip" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Course<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><button type="button" class="tri-pastille" data-tri="lis" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Lisibilité<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><button type="button" class="tri-pastille" data-tri="tr" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Trouvés<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><button type="button" class="tri-pastille" data-tri="p1" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Mon 1er<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><button type="button" class="tri-pastille" data-tri="enc" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Montant<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><span class="tri-sens" aria-live="polite"></span></div>
   <div class="registre-boite"><table>
     <thead><tr class="groupes"><th colspan="2"></th><th colspan="2" class="g-prono">Mon prono</th>
     <th colspan="4" class="res g-res">Le résultat officiel</th></tr>
-    <tr><th>Date</th><th>Course</th><th>Top 8</th><th class="c-lis">Lisibilité</th><th class="res c-arr">Arrivée</th>
-    <th class="res">Trouvés</th><th class="res">Mon 1er</th><th class="res mont">Super Pick5 top 8<br><small>(mise 112 €)</small></th></tr></thead>
-    <tbody><tr>
+    <tr><th data-tri="jour">Date</th><th data-tri="hip">Course</th><th>Top 8</th><th class="c-lis" data-tri="lis">Lisibilité</th><th class="res c-arr">Arrivée</th>
+    <th class="res" data-tri="tr">Trouvés</th><th class="res" data-tri="p1">Mon 1er</th><th class="res mont" data-tri="enc">Super Pick5 top 8<br><small>(mise 112 €)</small></th></tr></thead>
+    <tbody><tr data-jour="2026-11-18" data-mois="2026-11" data-type="attele" data-hip="Mauquenchy" data-lis="2" data-tr="4" data-p1="place" data-pl="1.40" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="superpick5/2026-11-18.html">18/11</a></td>
   <td class="c-course">Mauquenchy<br><span class="meta">R1C7</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">14</span><span class="tapis plein petit">2</span><span class="tapis plein petit">11</span><span class="tapis petit">9</span><span class="tapis plein petit">7</span><span class="tapis petit">4</span><span class="tapis petit">8</span><span class="tapis petit">12</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">2</span><span class="tapis plein petit" title="2e">14</span><span class="tapis plein petit" title="3e">11</span><span class="tapis plein petit" title="4e">7</span><span class="tapis hors petit" title="5e">10</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont perte" data-label="Super Pick5 top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-17" data-mois="2026-11" data-type="monte" data-hip="Vincennes" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="superpick5/2026-11-17.html">17/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R3C7</span><span class="type t-monte petit">Monté</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">11</span><span class="tapis plein petit">5</span><span class="tapis plein petit">8</span><span class="tapis plein petit">13</span><span class="tapis petit">2</span><span class="tapis petit">9</span><span class="tapis plein petit">10</span><span class="tapis petit">1</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">13</span><span class="tapis plein petit" title="2e">5</span><span class="tapis plein petit" title="3e">8</span><span class="tapis hors petit" title="4e">7</span><span class="tapis plein petit" title="5e">10</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Super Pick5 top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-16" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="5" data-p1="non" data-pl="0.00" data-cg="gain" data-mise="112.00" data-enc="807.00">
   <td class="c-date"><a href="superpick5/2026-11-16.html">16/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C7</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">4</span><span class="tapis petit">11</span><span class="tapis plein petit">13</span><span class="tapis plein petit">9</span><span class="tapis plein petit">8</span><span class="tapis plein petit">10</span><span class="tapis plein petit">2</span><span class="tapis petit">1</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">9</span><span class="tapis plein petit" title="2e">13</span><span class="tapis plein petit" title="3e">2</span><span class="tapis plein petit" title="4e">10</span><span class="tapis plein petit" title="5e">8</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont gain" data-label="Super Pick5 top 8 (mise 112 €)" title="gain net : 695,00 €"><span class="etat top somme">807,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-15" data-mois="2026-11" data-type="haies" data-hip="Auteuil" data-lis="2" data-tr="3" data-p1="gagnant" data-pl="2.10" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="superpick5/2026-11-15.html">15/11</a></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C8</span><span class="type t-haies petit">Haies</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">5</span><span class="tapis plein petit">11</span><span class="tapis petit">2</span><span class="tapis plein petit">13</span><span class="tapis petit">12</span><span class="tapis petit">4</span><span class="tapis petit">15</span><span class="tapis petit">1</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">5</span><span class="tapis plein petit" title="2e">13</span><span class="tapis hors petit" title="3e">3</span><span class="tapis plein petit" title="4e">11</span><span class="tapis hors petit" title="5e">8</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont perte" data-label="Super Pick5 top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-14" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="2" data-tr="4" data-p1="place" data-pl="1.90" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="superpick5/2026-11-14.html">14/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C7</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">8</span><span class="tapis plein petit">11</span><span class="tapis petit">9</span><span class="tapis petit">7</span><span class="tapis petit">12</span><span class="tapis plein petit">13</span><span class="tapis plein petit">3</span><span class="tapis petit">4</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">11</span><span class="tapis plein petit" title="2e">8</span><span class="tapis plein petit" title="3e">3</span><span class="tapis plein petit" title="4e">13</span><span class="tapis hors petit" title="5e">5</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont perte" data-label="Super Pick5 top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-13" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="superpick5/2026-11-13.html">13/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">9</span><span class="tapis petit">11</span><span class="tapis plein petit">5</span><span class="tapis plein petit">8</span><span class="tapis petit">13</span><span class="tapis plein petit">14</span><span class="tapis plein petit">7</span><span class="tapis petit">17</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">5</span><span class="tapis hors petit" title="2e">18</span><span class="tapis plein petit" title="3e">7</span><span class="tapis plein petit" title="4e">8</span><span class="tapis plein petit" title="5e">14</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Super Pick5 top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-12" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="superpick5/2026-11-12.html">12/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C8</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">9</span><span class="tapis petit">12</span><span class="tapis plein petit">11</span><span class="tapis plein petit">4</span><span class="tapis plein petit">15</span><span class="tapis petit">5</span><span class="tapis petit">8</span><span class="tapis petit">1</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis hors petit" title="1er">3</span><span class="tapis plein petit" title="2e">4</span><span class="tapis plein petit" title="3e">15</span><span class="tapis plein petit" title="4e">11</span><span class="tapis plein petit" title="5e">9</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Super Pick5 top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-11" data-mois="2026-11" data-type="plat" data-hip="Toulouse" data-lis="2" data-tr="4" data-p1="place" data-pl="1.90" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="superpick5/2026-11-11.html">11/11</a></td>
   <td class="c-course">Toulouse<br><span class="meta">R1C7</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">6</span><span class="tapis petit">8</span><span class="tapis petit">4</span><span class="tapis plein petit">5</span><span class="tapis petit">1</span><span class="tapis plein petit">9</span><span class="tapis plein petit">10</span><span class="tapis petit">13</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">5</span><span class="tapis plein petit" title="2e">6</span><span class="tapis plein petit" title="3e">9</span><span class="tapis hors petit" title="4e">14</span><span class="tapis plein petit" title="5e">10</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont perte" data-label="Super Pick5 top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-10" data-mois="2026-11" data-type="attele" data-hip="Reims" data-lis="2" data-tr="3" data-p1="place" data-pl="1.60" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="superpick5/2026-11-10.html">10/11</a></td>
   <td class="c-course">Reims<br><span class="meta">R3C2</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">16</span><span class="tapis petit">10</span><span class="tapis petit">13</span><span class="tapis petit">1</span><span class="tapis plein petit">3</span><span class="tapis petit">7</span><span class="tapis petit">15</span><span class="tapis plein petit">11</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis hors petit" title="1er">9</span><span class="tapis plein petit" title="2e">3</span><span class="tapis plein petit" title="3e">16</span><span class="tapis hors petit" title="4e">4</span><span class="tapis plein petit" title="5e">11</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont perte" data-label="Super Pick5 top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-09" data-mois="2026-11" data-type="attele" data-hip="Bordeaux-Le-Bouscat" data-lis="3" data-tr="5" data-p1="place" data-pl="1.60" data-cg="partiel" data-mise="112.00" data-enc="13.80">
   <td class="c-date"><a href="superpick5/2026-11-09.html">09/11</a></td>
   <td class="c-course">Bordeaux-Le-Bouscat<br><span class="meta">R1C8</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">16</span><span class="tapis plein petit">3</span><span class="tapis plein petit">4</span><span class="tapis plein petit">10</span><span class="tapis petit">11</span><span class="tapis petit">9</span><span class="tapis plein petit">6</span><span class="tapis petit">2</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">3</span><span class="tapis plein petit" title="2e">16</span><span class="tapis plein petit" title="3e">4</span><span class="tapis plein petit" title="4e">10</span><span class="tapis plein petit" title="5e">6</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Super Pick5 top 8 (mise 112 €)" title="perte nette : 98,20 €"><span class="etat partiel somme">13,80 €</span></td>
-</tr><tr class="sansprono">
+</tr><tr class="sansprono" data-jour="2026-11-08" data-mois="2026-11" data-type="plat" data-hip="Saint-Cloud" data-sans="1">
   <td class="c-date"><a href="superpick5/2026-11-08.html">08/11</a></td>
   <td class="c-course">Saint-Cloud<br><span class="meta">R1C8</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-sans" colspan="2" data-label="Mon prono"><span class="vide">pas de prono proposé ce jour-là</span></td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis petit" title="1er">7</span><span class="tapis petit" title="2e">4</span><span class="tapis petit" title="3e">3</span><span class="tapis petit" title="4e">14</span><span class="tapis petit" title="5e">2</span></div></td><td class="res c-vide" colspan="3"></td>
-</tr><tr class="sansprono">
+</tr><tr class="sansprono" data-jour="2026-11-07" data-mois="2026-11" data-type="attele" data-hip="Laval" data-sans="1">
   <td class="c-date"><a href="superpick5/2026-11-07.html">07/11</a></td>
   <td class="c-course">Laval<br><span class="meta">R5C3</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-sans" colspan="2" data-label="Mon prono"><span class="vide">pas de prono proposé ce jour-là</span></td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis petit" title="1er">13</span><span class="tapis petit" title="2e">9</span><span class="tapis petit" title="3e">15</span><span class="tapis petit" title="4e">10</span><span class="tapis petit" title="5e">5</span></div></td><td class="res c-vide" colspan="3"></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-06" data-mois="2026-11" data-type="plat" data-hip="Deauville" data-lis="2" data-tr="5" data-p1="non" data-pl="0.00" data-cg="gain" data-mise="112.00" data-enc="704.60">
   <td class="c-date"><a href="superpick5/2026-11-06.html">06/11</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Deauville<br><span class="meta">R4C6</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">7</span><span class="tapis petit">12</span><span class="tapis petit">4</span><span class="tapis plein petit">2</span><span class="tapis plein petit">9</span><span class="tapis plein petit">10</span><span class="tapis plein petit">5</span><span class="tapis plein petit">13</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">13</span><span class="tapis plein petit" title="2e">5</span><span class="tapis plein petit" title="3e">10</span><span class="tapis plein petit" title="4e">9</span><span class="tapis plein petit" title="5e">2</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont gain" data-label="Super Pick5 top 8 (mise 112 €)" title="gain net : 592,60 €"><span class="etat top somme">704,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-05" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="4" data-tr="4" data-p1="place" data-pl="1.20" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="superpick5/2026-11-05.html">05/11</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C7</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">10</span><span class="tapis plein petit">7</span><span class="tapis plein petit">14</span><span class="tapis plein petit">8</span><span class="tapis petit">5</span><span class="tapis petit">4</span><span class="tapis petit">11</span><span class="tapis petit">9</span></div></td>
@@ -136,6 +147,188 @@
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">14</span><span class="tapis plein petit" title="2e">10</span><span class="tapis plein petit" title="3e">7</span><span class="tapis plein petit" title="4e">8</span><span class="tapis hors petit" title="5e">1</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont perte" data-label="Super Pick5 top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
 </tr></tbody>
   </table></div>
+  <script>
+(function () {
+  "use strict";
+  var boite = document.getElementById("filtres");
+  var corps = document.querySelector(".registre-boite tbody");
+  if (!boite || !corps || !window.addEventListener || !boite.querySelectorAll) return;
+  var lignes = [].slice.call(corps.querySelectorAll("tr[data-jour]"));
+  var choix = [].slice.call(boite.querySelectorAll("select[data-f]"));
+  var bilan = document.getElementById("f-bilan");
+  var compte = boite.querySelector(".f-compte");
+  var PRONO = { lis: 1, tr: 1, p1: 1, cg: 1 };
+  var un = boite.getAttribute("data-un"), plur = boite.getAttribute("data-plur");
+  var champ = boite.getAttribute("data-champ");
+  function va(tr, f, v) {
+    if (!v) return true;
+    if (PRONO[f] && tr.hasAttribute("data-sans")) return false;
+    var d = tr.getAttribute("data-" + f);
+    if (d === null) return false;
+    if (f === "tr" && v === "0-2") return +d <= 2;
+    if (f === "p1" && v === "pg") return d === "gagnant" || d === "place";
+    return d === v;
+  }
+  function etat() {
+    var e = {};
+    choix.forEach(function (s) { e[s.getAttribute("data-f")] = s.value; });
+    return e;
+  }
+  function garde(tr, e, sauf) {
+    for (var f in e) { if (f !== sauf && !va(tr, f, e[f])) return false; }
+    return true;
+  }
+  function nb(x, d) {
+    return x.toFixed(d).replace(".", ",").replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+  function eur(x) { return nb(x, 2) + " €"; }
+  function argent(x, ref) {
+    var c = x > ref + 0.004 ? "gain" : (x < ref - 0.004 ? "perte" : "");
+    return '<b class="' + c + '">' + eur(x) + "</b>";
+  }
+  function maj() {
+    var e = etat(), actif = false, vus = 0, sans = 0, faits = [];
+    for (var f in e) { if (e[f]) actif = true; }
+    lignes.forEach(function (tr) {
+      var ok = garde(tr, e, null);
+      tr.hidden = !ok;
+      if (!ok) return;
+      vus++;
+      if (tr.hasAttribute("data-sans")) sans++;
+      else if (tr.hasAttribute("data-tr")) faits.push(tr);
+    });
+    choix.forEach(function (s) {
+      var f = s.getAttribute("data-f");
+      if (s.classList) s.classList.toggle("actif", !!s.value);
+      [].forEach.call(s.options, function (o) {
+        if (!o.value) return;
+        var n = 0;
+        lignes.forEach(function (tr) { if (garde(tr, e, f) && va(tr, f, o.value)) n++; });
+        o.textContent = o.getAttribute("data-lib") + " (" + n + ")";
+        o.disabled = !n && o.value !== s.value;
+      });
+    });
+    compte.textContent = actif ? (vus + " ligne" + (vus > 1 ? "s" : "") + " sur " + lignes.length) : "";
+    if (!actif) { bilan.hidden = true; return; }
+    var n = faits.length, h = [];
+    if (!n) {
+      bilan.textContent = "Aucune course courue avec mon prono dans cette sélection.";
+      bilan.hidden = false;
+      return;
+    }
+    var tr = 0, c5 = 0, c4 = 0, npl = 0, pla = 0, rpl = 0, mise = 0, enc = 0;
+    faits.forEach(function (t) {
+      var k = +t.getAttribute("data-tr");
+      tr += k; if (k === 5) c5++; if (k === 4) c4++;
+      var pl = t.getAttribute("data-pl");
+      if (pl !== null) {
+        npl++; rpl += +pl;
+        var p = t.getAttribute("data-p1");
+        if (p === "place" || p === "gagnant") pla++;
+      }
+      var m = t.getAttribute("data-mise");
+      if (m !== null) { mise += +m; enc += +t.getAttribute("data-enc"); }
+    });
+    h.push("<span><b>" + n + " " + (n > 1 ? plur : un) + "</b> couru" + (n > 1 ? "s" : "") +
+           " avec mon prono" + (sans ? " (+ " + sans + " jour" + (sans > 1 ? "s" : "") + " sans prono)" : "") + "</span>");
+    h.push("<span>Trouvés : <b>" + nb(tr / n, 1) + "</b> des 5 premiers en moyenne (5/5 : " + c5 +
+           " fois, 4/5 : " + c4 + " fois)</span>");
+    if (npl) {
+      h.push("<span>Mon 1er placé : <b>" + pla + " fois sur " + npl + "</b> (" + Math.round(100 * pla / npl) +
+             " %) · 1 € placé sur lui → " + argent(rpl / npl, 1) + " en moyenne</span>");
+    }
+    if (mise) {
+      h.push("<span>" + champ + " : " + argent(enc, mise) + " rendus pour " + eur(mise) +
+             " misés, soit " + argent(enc / mise, 1) + " pour 1 €</span>");
+    }
+    if (n < 30) {
+      h.push('<span class="f-peu">Moins de 30 courses : beaucoup trop peu pour en tirer quoi que ce soit.</span>');
+    }
+    if (e.tr || e.p1 || e.cg) {
+      h.push('<span class="f-apres">Ce filtre retient les courses selon leur résultat : on ne le connaît qu’après l’arrivée, ce n’est pas une façon de choisir ses courses.</span>');
+    }
+    bilan.innerHTML = h.join(" ");
+    bilan.hidden = false;
+  }
+  choix.forEach(function (s) { s.addEventListener("change", maj); });
+  /* v29.25 — TRIER (Rocco, 18/11 : « juste les triangles vers le haut ou vers le bas à côté
+     de chaque intitulé ») : un clic sur un titre trie, un 2e clic inverse l'ordre ; à égalité,
+     le plus récent d'abord ; une ligne sans la valeur (course pas encore courue, jour sans
+     prono) reste en bas. PC : les titres des colonnes ; fiches : la rangée « Trier : » */
+  var ORDRE = { jour: ["le plus récent d’abord", "le plus ancien d’abord"], hip: ["de Z à A", "de A à Z"],
+    lis: ["la plus claire d’abord (5 → 1)", "la plus ouverte d’abord (1 → 5)"], tr: ["5/5 d’abord", "0/5 d’abord"],
+    p1: ["gagnant d’abord", "non placé d’abord"], enc: ["le plus gros montant d’abord", "le plus petit d’abord"] };
+  var DEF = { jour: "desc", hip: "asc", lis: "desc", tr: "desc", p1: "desc", enc: "desc" };
+  var tri = { k: "jour", s: -1 };
+  var ths = [].slice.call(document.querySelectorAll(".registre-boite th[data-tri]"));
+  var barre = document.getElementById("tri-barre");
+  var pastilles = barre ? [].slice.call(barre.querySelectorAll("button[data-tri]")) : [];
+  var sensTxt = barre ? barre.querySelector(".tri-sens") : null;
+  function val(t, k) {
+    if (k === "jour") return t.getAttribute("data-jour");
+    if (k === "hip") return t.getAttribute("data-hip") || null;
+    if (k === "p1") {
+      var p = t.getAttribute("data-p1");
+      return p === "gagnant" ? 2 : (p === "place" ? 1 : (p === "non" ? 0 : null));
+    }
+    var v = t.getAttribute("data-" + k);
+    return v === null || v === "" ? null : +v;
+  }
+  function trier() {
+    var k = tri.k, s = tri.s;
+    lignes.slice().sort(function (a, b) {
+      var x = val(a, k), y = val(b, k);
+      if ((x === null) !== (y === null)) return x === null ? 1 : -1;
+      if (x !== null && x !== y) {
+        var c = typeof x === "string" ? x.localeCompare(y, "fr", { sensitivity: "base" }) : (x < y ? -1 : 1);
+        if (c) return c * s;
+      }
+      var ja = a.getAttribute("data-jour"), jb = b.getAttribute("data-jour");
+      return ja < jb ? 1 : (ja > jb ? -1 : 0);
+    }).forEach(function (t) { corps.appendChild(t); });
+    var nom = s > 0 ? "ascending" : "descending";
+    ths.forEach(function (th) {
+      th.setAttribute("aria-sort", th.getAttribute("data-tri") === k ? nom : "none");
+    });
+    pastilles.forEach(function (b) {
+      var on = b.getAttribute("data-tri") === k;
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      if (on) b.setAttribute("data-sens", nom); else b.removeAttribute("data-sens");
+    });
+    if (sensTxt) sensTxt.textContent = (ORDRE[k] || ORDRE.jour)[s > 0 ? 1 : 0];
+  }
+  function choisir(k) {
+    if (tri.k === k) tri.s = -tri.s;
+    else { tri.k = k; tri.s = DEF[k] === "asc" ? 1 : -1; }
+    trier();
+  }
+  ths.forEach(function (th) {                    /* PC : le titre d'une colonne devient un bouton */
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "tri";
+    b.title = "Trier par cette colonne (un 2e clic inverse l’ordre)";
+    while (th.firstChild) b.appendChild(th.firstChild);
+    var f = document.createElement("span");
+    f.className = "fleche";
+    f.setAttribute("aria-hidden", "true");
+    f.innerHTML = '<i class="t-h">▲</i><i class="t-b">▼</i>';
+    b.appendChild(f);
+    th.appendChild(b);
+    b.addEventListener("click", function () { choisir(th.getAttribute("data-tri")); });
+  });
+  pastilles.forEach(function (b) {               /* fiches : les mêmes titres, en boutons */
+    b.addEventListener("click", function () { choisir(b.getAttribute("data-tri")); });
+  });
+  boite.querySelector(".f-raz").addEventListener("click", function () {
+    choix.forEach(function (s) { s.value = ""; });
+    maj();
+  });
+  trier();
+  boite.hidden = false;                          /* le panneau des filtres reste FERMÉ au départ */
+  if (barre) barre.hidden = false;
+  maj();
+})();
+</script>
 </section>
 <section class="bilan" aria-labelledby="t-bilan">
   <h2 id="t-bilan">Mon bilan depuis le 5 novembre 2026</h2>

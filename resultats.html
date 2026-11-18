@@ -6,7 +6,7 @@
 <title>Tous les résultats du prono Quinté+ — Prono Quinté Rocco</title>
 <meta name="description" content="Registre complet de mes pronostics Quinté+ : top 8, arrivée, chevaux trouvés et rendement réel avec les rapports PMU.fr.">
 <link rel="canonical" href="https://prono-quinte-rocco.fr/resultats.html">
-<link rel="stylesheet" href="style.css?v=16feb868">
+<link rel="stylesheet" href="style.css?v=78da19bf">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -21,8 +21,8 @@
 <body>
 <div class="page">
 <header class="entete avec-jeux">
-  <a class="marque" href="index.html"><span class="tapis plein">R</span><span class="marque-nom"><b>Prono Quinté Rocco</b><span class="compteur" id="compteur-visites" hidden title="Visites depuis l'ouverture du site (GoatCounter, sans cookie)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="n"></span></span></span></a>
-  <nav aria-label="Menu"><a href="index.html">Prono du jour</a><a href="partants.html">Partants</a><a href="resultats.html" aria-current="page">Résultats</a><a href="methode.html">Ma méthode</a><a href="mentions-legales.html">Mentions légales</a><a class="soutenir" href="soutenir.html">💛 Soutenir</a></nav>
+  <a class="marque" href="index.html"><span class="tapis plein">R</span><span class="marque-nom"><b>Prono Quinté Rocco</b><span class="slogan">Quinté+ · Super Pick 5 — pronos gratuits</span><span class="compteur" id="compteur-visites" hidden title="Visites depuis l'ouverture du site (GoatCounter, sans cookie)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="n"></span></span></span></a>
+  <nav aria-label="Menu"><a href="index.html">Prono du jour</a><a href="partants.html">Partants</a><a href="resultats.html" aria-current="page">Résultats</a><a href="stats.html">Stats</a><a href="methode.html">Ma méthode</a><a href="mentions-legales.html">Mentions légales</a><a class="soutenir" href="soutenir.html">💛 Soutenir</a></nav>
 </header>
 <div class="jeux j-quinte" role="navigation" aria-label="Choix du jeu"><a class="jeu jeu-quinte actif" href="index.html" aria-current="true">Quinté+</a><a class="jeu jeu-sp5" href="superpick5.html">e-Super Pick5<small>entre 17 h et 19 h</small></a></div>
 <main>
@@ -33,6 +33,8 @@
   tel qu'il a été publié, puis, sur fond doré, le résultat officiel. Le montant
   « Quinté+ top 8 » indique ce qu'aurait encaissé mon top 8 joué en Quinté+ combiné
   (56 combinaisons, soit 112 € de mise), avec les rapports officiels de PMU.fr.</p>
+  <p><a class="lien-stats" href="stats.html">Voir mes statistiques</a> : par type de course, lisibilité,
+  hippodrome, mois… et les numéros qui sortent le plus.</p>
   <p class="meta">« Après coup » : prono mis en ligne après la course. Il vient du carnet de mon logiciel, qui l'enregistre avant le départ (l'heure d'analyse est affichée), mais seul un prono mis en ligne avant le départ le prouve à un visiteur. Le site a ouvert le 2 octobre 2026.</p>
   <div class="legende code">
     <div><b>Numéros</b> <span class="tapis plein petit">4</span> dans mon top 8 et dans les 5 premiers ·
@@ -44,432 +46,441 @@
     <span class="mont perte">en rouge</span> : rien</div>
     <div><b>Lisibilité</b> <span class="note" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span> ma note avant la course, de 1 (course très ouverte) à 5 (claire sur le papier)</div>
   </div>
+  <details class="filtres" id="filtres" data-un="Quinté" data-plur="Quintés" data-champ="Quinté+ top 8" hidden>
+    <summary><span class="f-titre">Filtrer les courses</span><span class="f-compte"></span></summary>
+    <div class="f-grille"><label>Période<select data-f="mois"><option value="">Toutes</option><option value="2026-11" data-lib="novembre 2026">novembre 2026 (18)</option><option value="2026-10" data-lib="octobre 2026">octobre 2026 (31)</option><option value="2026-09" data-lib="septembre 2026">septembre 2026 (22)</option></select></label><label>Type de course<select data-f="type"><option value="">Tous</option><option value="attele" data-lib="Trot attelé">Trot attelé (35)</option><option value="plat" data-lib="Plat">Plat (25)</option><option value="haies" data-lib="Haies">Haies (8)</option><option value="steeple" data-lib="Steeple-chase">Steeple-chase (3)</option></select></label><label>Hippodrome<select data-f="hip"><option value="">Tous</option><option value="Angers" data-lib="Angers">Angers (1)</option><option value="Argentan" data-lib="Argentan">Argentan (1)</option><option value="Auteuil" data-lib="Auteuil">Auteuil (10)</option><option value="Beaumont-De-Lomagne" data-lib="Beaumont-De-Lomagne">Beaumont-De-Lomagne (1)</option><option value="Bordeaux-Le-Bouscat" data-lib="Bordeaux-Le-Bouscat">Bordeaux-Le-Bouscat (1)</option><option value="Caen" data-lib="Caen">Caen (1)</option><option value="Chantilly" data-lib="Chantilly">Chantilly (5)</option><option value="Clairefontaine" data-lib="Clairefontaine">Clairefontaine (1)</option><option value="Compiegne" data-lib="Compiegne">Compiegne (3)</option><option value="Deauville" data-lib="Deauville">Deauville (4)</option><option value="Enghien-Soisy" data-lib="Enghien-Soisy">Enghien-Soisy (3)</option><option value="Feurs" data-lib="Feurs">Feurs (1)</option><option value="Fontainebleau" data-lib="Fontainebleau">Fontainebleau (2)</option><option value="La Capelle" data-lib="La Capelle">La Capelle (1)</option><option value="Laval" data-lib="Laval">Laval (2)</option><option value="Marseille-Borely" data-lib="Marseille-Borely">Marseille-Borely (1)</option><option value="Mauquenchy" data-lib="Mauquenchy">Mauquenchy (1)</option><option value="Nantes" data-lib="Nantes">Nantes (1)</option><option value="ParisLongchamp" data-lib="ParisLongchamp">ParisLongchamp (6)</option><option value="Reims" data-lib="Reims">Reims (1)</option><option value="Saint-Cloud" data-lib="Saint-Cloud">Saint-Cloud (3)</option><option value="Toulouse" data-lib="Toulouse">Toulouse (2)</option><option value="Vincennes" data-lib="Vincennes">Vincennes (19)</option></select></label><label>Lisibilité<select data-f="lis"><option value="">Toutes</option><option value="2" data-lib="2/5">2/5 (47)</option><option value="3" data-lib="3/5">3/5 (23)</option><option value="4" data-lib="4/5">4/5 (1)</option></select></label><label>Trouvés<select data-f="tr"><option value="">Tous</option><option value="5" data-lib="5/5">5/5 (17)</option><option value="4" data-lib="4/5">4/5 (25)</option><option value="3" data-lib="3/5">3/5 (18)</option><option value="0-2" data-lib="2/5 ou moins">2/5 ou moins (11)</option></select></label><label>Mon 1er<select data-f="p1"><option value="">Tous</option><option value="pg" data-lib="gagnant ou placé">gagnant ou placé (33)</option><option value="gagnant" data-lib="gagnant">gagnant (14)</option><option value="place" data-lib="placé">placé (19)</option><option value="non" data-lib="non placé">non placé (38)</option></select></label><label>Quinté+ top 8<select data-f="cg"><option value="">Tous</option><option value="gain" data-lib="plus que la mise">plus que la mise (8)</option><option value="partiel" data-lib="une partie de la mise">une partie de la mise (41)</option><option value="perte" data-lib="rien">rien (22)</option></select></label><div class="f-bouton"><button type="button" class="f-raz">Réinitialiser</button></div></div>
+    <p class="f-pied">Un groupe choisi après coup peut sembler gagnant par simple hasard : sous 30 courses, il ne
+    prouve rien. Et « Trouvés », « Mon 1er » et « Quinté+ top 8 » retiennent les courses selon leur résultat : on ne le
+    connaît qu'après l'arrivée.</p>
+  </details>
+  <p class="f-bilan" id="f-bilan" aria-live="polite" hidden></p>
+  <div class="tri-barre" id="tri-barre" hidden><span class="tri-lib">Trier :</span><button type="button" class="tri-pastille" data-tri="jour" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Date<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><button type="button" class="tri-pastille" data-tri="hip" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Course<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><button type="button" class="tri-pastille" data-tri="lis" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Lisibilité<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><button type="button" class="tri-pastille" data-tri="tr" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Trouvés<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><button type="button" class="tri-pastille" data-tri="p1" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Mon 1er<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><button type="button" class="tri-pastille" data-tri="enc" aria-pressed="false" title="Trier (un 2e appui inverse l’ordre)">Montant<span class="fleche" aria-hidden="true"><i class="t-h">▲</i><i class="t-b">▼</i></span></button><span class="tri-sens" aria-live="polite"></span></div>
   <div class="registre-boite"><table>
     <thead><tr class="groupes"><th colspan="2"></th><th colspan="2" class="g-prono">Mon prono</th>
     <th colspan="4" class="res g-res">Le résultat officiel</th></tr>
-    <tr><th>Date</th><th>Course</th><th>Top 8</th><th class="c-lis">Lisibilité</th><th class="res c-arr">Arrivée</th>
-    <th class="res">Trouvés</th><th class="res">Mon 1er</th><th class="res mont">Quinté+ top 8<br><small>(mise 112 €)</small></th></tr></thead>
-    <tbody><tr>
+    <tr><th data-tri="jour">Date</th><th data-tri="hip">Course</th><th>Top 8</th><th class="c-lis" data-tri="lis">Lisibilité</th><th class="res c-arr">Arrivée</th>
+    <th class="res" data-tri="tr">Trouvés</th><th class="res" data-tri="p1">Mon 1er</th><th class="res mont" data-tri="enc">Quinté+ top 8<br><small>(mise 112 €)</small></th></tr></thead>
+    <tbody><tr data-jour="2026-11-18" data-mois="2026-11" data-type="attele" data-hip="Mauquenchy" data-lis="2" data-tr="5" data-p1="non" data-pl="0.00" data-cg="gain" data-mise="112.00" data-enc="180.40">
   <td class="c-date"><a href="quinte/2026-11-18.html">18/11</a></td>
   <td class="c-course">Mauquenchy<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">13</span><span class="tapis plein petit">8</span><span class="tapis petit">9</span><span class="tapis plein petit">14</span><span class="tapis plein petit">1</span><span class="tapis plein petit">12</span><span class="tapis petit">6</span><span class="tapis plein petit">2</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">2</span><span class="tapis plein petit" title="2e">1</span><span class="tapis plein petit" title="3e">14</span><span class="tapis plein petit" title="4e">12</span><span class="tapis plein petit" title="5e">8</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont gain" data-label="Quinté+ top 8 (mise 112 €)" title="gain net : 68,40 €"><span class="etat top somme">180,40 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-17" data-mois="2026-11" data-type="plat" data-hip="Chantilly" data-lis="2" data-tr="5" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="108.80">
   <td class="c-date"><a href="quinte/2026-11-17.html">17/11</a></td>
   <td class="c-course">Chantilly<br><span class="meta">R1C4</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">2</span><span class="tapis plein petit">14</span><span class="tapis petit">4</span><span class="tapis plein petit">8</span><span class="tapis plein petit">7</span><span class="tapis petit">5</span><span class="tapis plein petit">1</span><span class="tapis petit">13</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">8</span><span class="tapis plein petit" title="2e">1</span><span class="tapis plein petit" title="3e">14</span><span class="tapis plein petit" title="4e">2</span><span class="tapis plein petit" title="5e">7</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 3,20 €"><span class="etat partiel somme">108,80 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-16" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="49.60">
   <td class="c-date"><a href="quinte/2026-11-16.html">16/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">10</span><span class="tapis plein petit">4</span><span class="tapis petit">2</span><span class="tapis plein petit">6</span><span class="tapis petit">8</span><span class="tapis petit">5</span><span class="tapis plein petit">14</span><span class="tapis petit">3</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">6</span><span class="tapis plein petit" title="2e">4</span><span class="tapis hors petit" title="3e">13</span><span class="tapis plein petit" title="4e">10</span><span class="tapis plein petit" title="5e">14</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 62,40 €"><span class="etat partiel somme">49,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-15" data-mois="2026-11" data-type="steeple" data-hip="Auteuil" data-lis="2" data-tr="3" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-11-15.html">15/11</a></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C6</span><span class="type t-steeple petit">Steeple</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">7</span><span class="tapis plein petit">4</span><span class="tapis petit">12</span><span class="tapis plein petit">1</span><span class="tapis plein petit">9</span><span class="tapis petit">11</span><span class="tapis petit">5</span><span class="tapis petit">13</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">9</span><span class="tapis plein petit" title="2e">4</span><span class="tapis hors petit" title="3e">15</span><span class="tapis hors petit" title="4e">10</span><span class="tapis plein petit" title="5e">1</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-14" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="72.00">
   <td class="c-date"><a href="quinte/2026-11-14.html">14/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">15</span><span class="tapis petit">17</span><span class="tapis plein petit">8</span><span class="tapis petit">7</span><span class="tapis plein petit">5</span><span class="tapis petit">11</span><span class="tapis plein petit">13</span><span class="tapis plein petit">2</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">8</span><span class="tapis plein petit" title="2e">13</span><span class="tapis plein petit" title="3e">5</span><span class="tapis hors petit" title="4e">3</span><span class="tapis plein petit" title="5e">2</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 40,00 €"><span class="etat partiel somme">72,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-13" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="2" data-tr="5" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="46.40">
   <td class="c-date"><a href="quinte/2026-11-13.html">13/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">5</span><span class="tapis plein petit">2</span><span class="tapis plein petit">6</span><span class="tapis plein petit">8</span><span class="tapis petit">17</span><span class="tapis plein petit">13</span><span class="tapis petit">4</span><span class="tapis petit">1</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">8</span><span class="tapis plein petit" title="2e">13</span><span class="tapis plein petit" title="3e">2</span><span class="tapis plein petit" title="4e">6</span><span class="tapis plein petit" title="5e">5</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 65,60 €"><span class="etat partiel somme">46,40 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-12" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="2" data-tr="3" data-p1="gagnant" data-pl="1.30" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-11-12.html">12/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">2</span><span class="tapis plein petit">12</span><span class="tapis petit">9</span><span class="tapis plein petit">6</span><span class="tapis petit">3</span><span class="tapis petit">5</span><span class="tapis petit">8</span><span class="tapis petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">2</span><span class="tapis hors petit" title="2e">1</span><span class="tapis hors petit" title="3e">13</span><span class="tapis plein petit" title="4e">6</span><span class="tapis plein petit" title="5e">12</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-11" data-mois="2026-11" data-type="plat" data-hip="Toulouse" data-lis="2" data-tr="3" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="62.00">
   <td class="c-date"><a href="quinte/2026-11-11.html">11/11</a></td>
   <td class="c-course">Toulouse<br><span class="meta">R1C3</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">10</span><span class="tapis petit">11</span><span class="tapis plein petit">5</span><span class="tapis plein petit">7</span><span class="tapis petit">8</span><span class="tapis plein petit">3</span><span class="tapis petit">13</span><span class="tapis petit">1</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">5</span><span class="tapis plein petit" title="2e">3</span><span class="tapis plein petit" title="3e">7</span><span class="tapis hors petit" title="4e">9</span><span class="tapis hors petit" title="5e">6</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 50,00 €"><span class="etat partiel somme">62,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-10" data-mois="2026-11" data-type="plat" data-hip="Fontainebleau" data-lis="2" data-tr="2" data-p1="place" data-pl="2.50" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-11-10.html">10/11</a></td>
   <td class="c-course">Fontainebleau<br><span class="meta">R1C4</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">9</span><span class="tapis plein petit">5</span><span class="tapis petit">10</span><span class="tapis petit">14</span><span class="tapis petit">8</span><span class="tapis petit">7</span><span class="tapis petit">1</span><span class="tapis petit">2</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis hors petit" title="1er">4</span><span class="tapis plein petit" title="2e">9</span><span class="tapis hors petit" title="3e">15</span><span class="tapis plein petit" title="4e">5</span><span class="tapis hors petit" title="5e">13</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-09" data-mois="2026-11" data-type="attele" data-hip="Bordeaux-Le-Bouscat" data-lis="3" data-tr="5" data-p1="gagnant" data-pl="1.40" data-cg="partiel" data-mise="112.00" data-enc="63.00">
   <td class="c-date"><a href="quinte/2026-11-09.html">09/11</a></td>
   <td class="c-course">Bordeaux-Le-Bouscat<br><span class="meta">R1C2</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">5</span><span class="tapis petit">11</span><span class="tapis plein petit">6</span><span class="tapis plein petit">13</span><span class="tapis petit">7</span><span class="tapis petit">4</span><span class="tapis plein petit">15</span><span class="tapis plein petit">10</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">5</span><span class="tapis plein petit" title="2e">6</span><span class="tapis plein petit" title="3e">15</span><span class="tapis plein petit" title="4e">13</span><span class="tapis plein petit" title="5e">10</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 49,00 €"><span class="etat partiel somme">63,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-08" data-mois="2026-11" data-type="plat" data-hip="Saint-Cloud" data-lis="3" data-tr="4" data-p1="gagnant" data-pl="2.00" data-cg="partiel" data-mise="112.00" data-enc="16.80">
   <td class="c-date"><a href="quinte/2026-11-08.html">08/11</a></td>
   <td class="c-course">Saint-Cloud<br><span class="meta">R1C5</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">7</span><span class="tapis plein petit">11</span><span class="tapis petit">5</span><span class="tapis petit">8</span><span class="tapis plein petit">1</span><span class="tapis petit">15</span><span class="tapis petit">13</span><span class="tapis plein petit">4</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">7</span><span class="tapis plein petit" title="2e">1</span><span class="tapis hors petit" title="3e">10</span><span class="tapis plein petit" title="4e">11</span><span class="tapis plein petit" title="5e">4</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 95,20 €"><span class="etat partiel somme">16,80 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-07" data-mois="2026-11" data-type="plat" data-hip="Deauville" data-lis="2" data-tr="3" data-p1="gagnant" data-pl="1.70" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-11-07.html">07/11</a></td>
   <td class="c-course">Deauville<br><span class="meta">R1C3</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">1</span><span class="tapis petit">16</span><span class="tapis petit">7</span><span class="tapis plein petit">14</span><span class="tapis petit">2</span><span class="tapis plein petit">13</span><span class="tapis petit">15</span><span class="tapis petit">4</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">1</span><span class="tapis plein petit" title="2e">14</span><span class="tapis hors petit" title="3e">9</span><span class="tapis plein petit" title="4e">13</span><span class="tapis hors petit" title="5e">12</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-06" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="2" data-tr="2" data-p1="gagnant" data-pl="1.90" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-11-06.html">06/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">18</span><span class="tapis petit">17</span><span class="tapis plein petit">2</span><span class="tapis petit">9</span><span class="tapis petit">8</span><span class="tapis petit">6</span><span class="tapis petit">14</span><span class="tapis petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">18</span><span class="tapis plein petit" title="2e">2</span><span class="tapis hors petit" title="3e">10</span><span class="tapis hors petit" title="4e">15</span><span class="tapis hors petit" title="5e">3</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-11-05" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="4" data-p1="gagnant" data-pl="1.80" data-cg="partiel" data-mise="112.00" data-enc="33.60">
   <td class="c-date"><a href="quinte/2026-11-05.html">05/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">9</span><span class="tapis plein petit">5</span><span class="tapis petit">4</span><span class="tapis plein petit">6</span><span class="tapis plein petit">15</span><span class="tapis petit">16</span><span class="tapis petit">14</span><span class="tapis petit">12</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">9</span><span class="tapis plein petit" title="2e">6</span><span class="tapis plein petit" title="3e">15</span><span class="tapis hors petit" title="4e">1</span><span class="tapis plein petit" title="5e">5</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 78,40 €"><span class="etat partiel somme">33,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-04" data-mois="2026-11" data-type="attele" data-hip="Nantes" data-lis="3" data-tr="5" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="102.00">
   <td class="c-date"><a href="quinte/2026-11-04.html">04/11</a></td>
   <td class="c-course">Nantes<br><span class="meta">R1C2</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">7</span><span class="tapis petit">1</span><span class="tapis plein petit">12</span><span class="tapis plein petit">6</span><span class="tapis petit">9</span><span class="tapis plein petit">8</span><span class="tapis petit">10</span><span class="tapis plein petit">3</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">12</span><span class="tapis plein petit" title="2e">8</span><span class="tapis plein petit" title="3e">6</span><span class="tapis plein petit" title="4e">3</span><span class="tapis plein petit" title="5e">7</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 10,00 €"><span class="etat partiel somme">102,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-03" data-mois="2026-11" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="5" data-p1="non" data-pl="0.00" data-cg="gain" data-mise="112.00" data-enc="147.20">
   <td class="c-date"><a href="quinte/2026-11-03.html">03/11</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">5</span><span class="tapis plein petit">11</span><span class="tapis plein petit">13</span><span class="tapis plein petit">16</span><span class="tapis plein petit">15</span><span class="tapis petit">14</span><span class="tapis petit">8</span><span class="tapis plein petit">17</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">11</span><span class="tapis plein petit" title="2e">13</span><span class="tapis plein petit" title="3e">17</span><span class="tapis plein petit" title="4e">15</span><span class="tapis plein petit" title="5e">16</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont gain" data-label="Quinté+ top 8 (mise 112 €)" title="gain net : 35,20 €"><span class="etat top somme">147,20 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-02" data-mois="2026-11" data-type="plat" data-hip="Fontainebleau" data-lis="2" data-tr="5" data-p1="gagnant" data-pl="1.70" data-cg="partiel" data-mise="112.00" data-enc="56.60">
   <td class="c-date"><a href="quinte/2026-11-02.html">02/11</a></td>
   <td class="c-course">Fontainebleau<br><span class="meta">R1C3</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">1</span><span class="tapis plein petit">11</span><span class="tapis plein petit">5</span><span class="tapis plein petit">6</span><span class="tapis petit">13</span><span class="tapis petit">10</span><span class="tapis petit">7</span><span class="tapis plein petit">3</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">1</span><span class="tapis plein petit" title="2e">5</span><span class="tapis plein petit" title="3e">3</span><span class="tapis plein petit" title="4e">6</span><span class="tapis plein petit" title="5e">11</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 55,40 €"><span class="etat partiel somme">56,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-11-01" data-mois="2026-11" data-type="attele" data-hip="Laval" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="21.60">
   <td class="c-date"><a href="quinte/2026-11-01.html">01/11</a></td>
   <td class="c-course">Laval<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">4</span><span class="tapis plein petit">17</span><span class="tapis plein petit">5</span><span class="tapis petit">18</span><span class="tapis plein petit">12</span><span class="tapis petit">15</span><span class="tapis petit">6</span><span class="tapis plein petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">17</span><span class="tapis hors petit" title="2e">2</span><span class="tapis plein petit" title="3e">5</span><span class="tapis plein petit" title="4e">12</span><span class="tapis plein petit" title="5e">7</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 90,40 €"><span class="etat partiel somme">21,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-31" data-mois="2026-10" data-type="plat" data-hip="Deauville" data-lis="2" data-tr="3" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-31.html">31/10</a></td>
   <td class="c-course">Deauville<br><span class="meta">R1C3</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">6</span><span class="tapis plein petit">9</span><span class="tapis plein petit">11</span><span class="tapis petit">16</span><span class="tapis petit">7</span><span class="tapis petit">8</span><span class="tapis plein petit">1</span><span class="tapis petit">4</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">9</span><span class="tapis plein petit" title="2e">11</span><span class="tapis hors petit" title="3e">3</span><span class="tapis plein petit" title="4e">1</span><span class="tapis hors petit" title="5e">5</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-30" data-mois="2026-10" data-type="attele" data-hip="Vincennes" data-lis="2" data-tr="2" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-30.html">30/10</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C5</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">10</span><span class="tapis petit">17</span><span class="tapis petit">16</span><span class="tapis petit">9</span><span class="tapis petit">15</span><span class="tapis plein petit">12</span><span class="tapis plein petit">7</span><span class="tapis petit">13</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">7</span><span class="tapis plein petit" title="2e">12</span><span class="tapis hors petit" title="3e">5</span><span class="tapis hors petit" title="4e">3</span><span class="tapis hors petit" title="5e">4</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-29" data-mois="2026-10" data-type="attele" data-hip="Vincennes" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="11.20">
   <td class="c-date"><a href="quinte/2026-10-29.html">29/10</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">12</span><span class="tapis plein petit">3</span><span class="tapis petit">8</span><span class="tapis petit">1</span><span class="tapis plein petit">14</span><span class="tapis plein petit">10</span><span class="tapis petit">11</span><span class="tapis petit">4</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">14</span><span class="tapis plein petit" title="2e">10</span><span class="tapis hors petit" title="3e">5</span><span class="tapis plein petit" title="4e">3</span><span class="tapis plein petit" title="5e">12</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 100,80 €"><span class="etat partiel somme">11,20 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-28" data-mois="2026-10" data-type="haies" data-hip="Auteuil" data-lis="2" data-tr="2" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-28.html">28/10</a></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C4</span><span class="type t-haies petit">Haies</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">3</span><span class="tapis petit">8</span><span class="tapis petit">10</span><span class="tapis petit">9</span><span class="tapis plein petit">14</span><span class="tapis petit">6</span><span class="tapis plein petit">11</span><span class="tapis petit">2</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">14</span><span class="tapis hors petit" title="2e">12</span><span class="tapis plein petit" title="3e">11</span><span class="tapis hors petit" title="4e">7</span><span class="tapis hors petit" title="5e">4</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-27" data-mois="2026-10" data-type="plat" data-hip="Deauville" data-lis="2" data-tr="2" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-27.html">27/10</a></td>
   <td class="c-course">Deauville<br><span class="meta">R1C1</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">2</span><span class="tapis petit">4</span><span class="tapis plein petit">9</span><span class="tapis petit">12</span><span class="tapis petit">13</span><span class="tapis petit">14</span><span class="tapis petit">1</span><span class="tapis plein petit">10</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">10</span><span class="tapis hors petit" title="2e">6</span><span class="tapis plein petit" title="3e">9</span><span class="tapis hors petit" title="4e">15</span><span class="tapis hors petit" title="5e">3</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-26" data-mois="2026-10" data-type="plat" data-hip="Chantilly" data-lis="2" data-tr="5" data-p1="place" data-pl="1.90" data-cg="partiel" data-mise="112.00" data-enc="91.00">
   <td class="c-date"><a href="quinte/2026-10-26.html">26/10</a></td>
   <td class="c-course">Chantilly<br><span class="meta">R1C4</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">3</span><span class="tapis petit">5</span><span class="tapis plein petit">12</span><span class="tapis petit">14</span><span class="tapis plein petit">9</span><span class="tapis plein petit">10</span><span class="tapis petit">8</span><span class="tapis plein petit">13</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">12</span><span class="tapis plein petit" title="2e">3</span><span class="tapis plein petit" title="3e">10</span><span class="tapis plein petit" title="4e">13</span><span class="tapis plein petit" title="5e">9</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 21,00 €"><span class="etat partiel somme">91,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-25" data-mois="2026-10" data-type="plat" data-hip="Saint-Cloud" data-lis="2" data-tr="2" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-25.html">25/10</a></td>
   <td class="c-course">Saint-Cloud<br><span class="meta">R1C5</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">2</span><span class="tapis petit">7</span><span class="tapis plein petit">13</span><span class="tapis petit">15</span><span class="tapis plein petit">3</span><span class="tapis petit">11</span><span class="tapis petit">6</span><span class="tapis petit">8</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis hors petit" title="1er">9</span><span class="tapis plein petit" title="2e">13</span><span class="tapis hors petit" title="3e">10</span><span class="tapis plein petit" title="4e">3</span><span class="tapis hors petit" title="5e">4</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-24" data-mois="2026-10" data-type="haies" data-hip="Compiegne" data-lis="2" data-tr="3" data-p1="place" data-pl="1.80" data-cg="partiel" data-mise="112.00" data-enc="24.00">
   <td class="c-date"><a href="quinte/2026-10-24.html">24/10</a></td>
   <td class="c-course">Compiegne<br><span class="meta">R1C3</span><span class="type t-haies petit">Haies</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">7</span><span class="tapis plein petit">4</span><span class="tapis plein petit">9</span><span class="tapis petit">8</span><span class="tapis petit">1</span><span class="tapis petit">2</span><span class="tapis petit">6</span><span class="tapis petit">12</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">9</span><span class="tapis plein petit" title="2e">4</span><span class="tapis plein petit" title="3e">7</span><span class="tapis hors petit" title="4e">13</span><span class="tapis hors petit" title="5e">11</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 88,00 €"><span class="etat partiel somme">24,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-23" data-mois="2026-10" data-type="attele" data-hip="Vincennes" data-lis="2" data-tr="2" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-23.html">23/10</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">11</span><span class="tapis plein petit">15</span><span class="tapis petit">10</span><span class="tapis petit">7</span><span class="tapis petit">8</span><span class="tapis plein petit">6</span><span class="tapis petit">9</span><span class="tapis petit">13</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">15</span><span class="tapis hors petit" title="2e">12</span><span class="tapis plein petit" title="3e">6</span><span class="tapis hors petit" title="4e">14</span><span class="tapis hors petit" title="5e">16</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-22" data-mois="2026-10" data-type="steeple" data-hip="Auteuil" data-lis="2" data-tr="4" data-p1="place" data-pl="2.70" data-cg="partiel" data-mise="112.00" data-enc="81.20">
   <td class="c-date"><a href="quinte/2026-10-22.html">22/10</a></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C1</span><span class="type t-steeple petit">Steeple</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">9</span><span class="tapis petit">15</span><span class="tapis plein petit">7</span><span class="tapis plein petit">5</span><span class="tapis petit">11</span><span class="tapis plein petit">12</span><span class="tapis petit">13</span><span class="tapis petit">16</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">12</span><span class="tapis plein petit" title="2e">5</span><span class="tapis plein petit" title="3e">9</span><span class="tapis plein petit" title="4e">7</span><span class="tapis hors petit" title="5e">3</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 30,80 €"><span class="etat partiel somme">81,20 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-21" data-mois="2026-10" data-type="attele" data-hip="Toulouse" data-lis="3" data-tr="4" data-p1="place" data-pl="1.40" data-cg="partiel" data-mise="112.00" data-enc="22.00">
   <td class="c-date"><a href="quinte/2026-10-21.html">21/10</a></td>
   <td class="c-course">Toulouse<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">12</span><span class="tapis plein petit">10</span><span class="tapis plein petit">13</span><span class="tapis petit">1</span><span class="tapis plein petit">4</span><span class="tapis petit">7</span><span class="tapis petit">5</span><span class="tapis petit">8</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">13</span><span class="tapis plein petit" title="2e">12</span><span class="tapis plein petit" title="3e">10</span><span class="tapis plein petit" title="4e">4</span><span class="tapis hors petit" title="5e">2</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 90,00 €"><span class="etat partiel somme">22,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-20" data-mois="2026-10" data-type="plat" data-hip="Clairefontaine" data-lis="2" data-tr="3" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-20.html">20/10</a></td>
   <td class="c-course">Clairefontaine<br><span class="meta">R1C1</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">2</span><span class="tapis petit">10</span><span class="tapis plein petit">3</span><span class="tapis plein petit">15</span><span class="tapis petit">9</span><span class="tapis plein petit">13</span><span class="tapis petit">4</span><span class="tapis petit">8</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis hors petit" title="1er">5</span><span class="tapis plein petit" title="2e">13</span><span class="tapis hors petit" title="3e">14</span><span class="tapis plein petit" title="4e">3</span><span class="tapis plein petit" title="5e">15</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-19" data-mois="2026-10" data-type="plat" data-hip="Deauville" data-lis="2" data-tr="4" data-p1="place" data-pl="1.70" data-cg="partiel" data-mise="112.00" data-enc="23.20">
   <td class="c-date"><a href="quinte/2026-10-19.html">19/10</a></td>
   <td class="c-course">Deauville<br><span class="meta">R1C1</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">2</span><span class="tapis plein petit">1</span><span class="tapis plein petit">13</span><span class="tapis petit">10</span><span class="tapis petit">14</span><span class="tapis petit">3</span><span class="tapis plein petit">4</span><span class="tapis petit">8</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">4</span><span class="tapis plein petit" title="2e">2</span><span class="tapis hors petit" title="3e">6</span><span class="tapis plein petit" title="4e">1</span><span class="tapis plein petit" title="5e">13</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 88,80 €"><span class="etat partiel somme">23,20 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-18" data-mois="2026-10" data-type="plat" data-hip="ParisLongchamp" data-lis="2" data-tr="2" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-18.html">18/10</a></td>
   <td class="c-course">ParisLongchamp<br><span class="meta">R1C3</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">8</span><span class="tapis plein petit">4</span><span class="tapis petit">1</span><span class="tapis plein petit">10</span><span class="tapis petit">12</span><span class="tapis petit">7</span><span class="tapis petit">2</span><span class="tapis petit">3</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">4</span><span class="tapis hors petit" title="2e">5</span><span class="tapis hors petit" title="3e">9</span><span class="tapis plein petit" title="4e">10</span><span class="tapis hors petit" title="5e">11</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-17" data-mois="2026-10" data-type="haies" data-hip="Auteuil" data-lis="2" data-tr="5" data-p1="place" data-pl="2.40" data-cg="gain" data-mise="112.00" data-enc="273.40">
   <td class="c-date"><a href="quinte/2026-10-17.html">17/10</a></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C3</span><span class="type t-haies petit">Haies</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">6</span><span class="tapis petit">5</span><span class="tapis petit">19</span><span class="tapis petit">12</span><span class="tapis plein petit">2</span><span class="tapis plein petit">11</span><span class="tapis plein petit">1</span><span class="tapis plein petit">4</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">1</span><span class="tapis plein petit" title="2e">6</span><span class="tapis plein petit" title="3e">4</span><span class="tapis plein petit" title="4e">11</span><span class="tapis plein petit" title="5e">2</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont gain" data-label="Quinté+ top 8 (mise 112 €)" title="gain net : 161,40 €"><span class="etat top somme">273,40 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-16" data-mois="2026-10" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="5" data-p1="non" data-pl="0.00" data-cg="gain" data-mise="112.00" data-enc="241.00">
   <td class="c-date"><a href="quinte/2026-10-16.html">16/10</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">3</span><span class="tapis plein petit">6</span><span class="tapis plein petit">7</span><span class="tapis petit">12</span><span class="tapis plein petit">13</span><span class="tapis plein petit">4</span><span class="tapis plein petit">11</span><span class="tapis petit">1</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">4</span><span class="tapis plein petit" title="2e">11</span><span class="tapis plein petit" title="3e">7</span><span class="tapis plein petit" title="4e">6</span><span class="tapis plein petit" title="5e">13</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont gain" data-label="Quinté+ top 8 (mise 112 €)" title="gain net : 129,00 €"><span class="etat top somme">241,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-15" data-mois="2026-10" data-type="plat" data-hip="Chantilly" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="gain" data-mise="112.00" data-enc="136.80">
   <td class="c-date"><a href="quinte/2026-10-15.html">15/10</a></td>
   <td class="c-course">Chantilly<br><span class="meta">R1C1</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">7</span><span class="tapis plein petit">9</span><span class="tapis petit">1</span><span class="tapis plein petit">11</span><span class="tapis petit">2</span><span class="tapis petit">4</span><span class="tapis plein petit">15</span><span class="tapis plein petit">12</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">12</span><span class="tapis plein petit" title="2e">11</span><span class="tapis hors petit" title="3e">8</span><span class="tapis plein petit" title="4e">9</span><span class="tapis plein petit" title="5e">15</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont gain" data-label="Quinté+ top 8 (mise 112 €)" title="gain net : 24,80 €"><span class="etat top somme">136,80 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-14" data-mois="2026-10" data-type="attele" data-hip="Reims" data-lis="3" data-tr="5" data-p1="place" data-pl="1.90" data-cg="partiel" data-mise="112.00" data-enc="88.60">
   <td class="c-date"><a href="quinte/2026-10-14.html">14/10</a></td>
   <td class="c-course">Reims<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">15</span><span class="tapis petit">2</span><span class="tapis plein petit">10</span><span class="tapis plein petit">13</span><span class="tapis plein petit">5</span><span class="tapis petit">8</span><span class="tapis plein petit">9</span><span class="tapis petit">6</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">10</span><span class="tapis plein petit" title="2e">15</span><span class="tapis plein petit" title="3e">13</span><span class="tapis plein petit" title="4e">5</span><span class="tapis plein petit" title="5e">9</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 23,40 €"><span class="etat partiel somme">88,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-13" data-mois="2026-10" data-type="plat" data-hip="ParisLongchamp" data-lis="2" data-tr="3" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-13.html">13/10</a></td>
   <td class="c-course">ParisLongchamp<br><span class="meta">R1C1</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">14</span><span class="tapis petit">12</span><span class="tapis plein petit">9</span><span class="tapis plein petit">16</span><span class="tapis petit">10</span><span class="tapis petit">3</span><span class="tapis petit">7</span><span class="tapis petit">8</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">9</span><span class="tapis plein petit" title="2e">16</span><span class="tapis hors petit" title="3e">2</span><span class="tapis plein petit" title="4e">14</span><span class="tapis hors petit" title="5e">1</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-12" data-mois="2026-10" data-type="plat" data-hip="Marseille-Borely" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="68.00">
   <td class="c-date"><a href="quinte/2026-10-12.html">12/10</a></td>
   <td class="c-course">Marseille-Borely<br><span class="meta">R1C4</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">7</span><span class="tapis petit">3</span><span class="tapis plein petit">11</span><span class="tapis petit">4</span><span class="tapis plein petit">2</span><span class="tapis plein petit">12</span><span class="tapis petit">1</span><span class="tapis plein petit">10</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">2</span><span class="tapis plein petit" title="2e">10</span><span class="tapis hors petit" title="3e">14</span><span class="tapis plein petit" title="4e">11</span><span class="tapis plein petit" title="5e">12</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 44,00 €"><span class="etat partiel somme">68,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-11" data-mois="2026-10" data-type="steeple" data-hip="Auteuil" data-lis="2" data-tr="3" data-p1="gagnant" data-pl="1.90" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-11.html">11/10</a></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C3</span><span class="type t-steeple petit">Steeple</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">15</span><span class="tapis plein petit">2</span><span class="tapis petit">14</span><span class="tapis plein petit">1</span><span class="tapis petit">11</span><span class="tapis petit">8</span><span class="tapis petit">6</span><span class="tapis petit">16</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">15</span><span class="tapis plein petit" title="2e">2</span><span class="tapis hors petit" title="3e">3</span><span class="tapis hors petit" title="4e">12</span><span class="tapis plein petit" title="5e">1</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-10" data-mois="2026-10" data-type="attele" data-hip="Caen" data-lis="2" data-tr="3" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-10.html">10/10</a></td>
   <td class="c-course">Caen<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">2</span><span class="tapis petit">18</span><span class="tapis plein petit">4</span><span class="tapis plein petit">10</span><span class="tapis petit">15</span><span class="tapis petit">1</span><span class="tapis petit">11</span><span class="tapis petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis hors petit" title="1er">9</span><span class="tapis plein petit" title="2e">10</span><span class="tapis plein petit" title="3e">4</span><span class="tapis hors petit" title="4e">3</span><span class="tapis plein petit" title="5e">2</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-09" data-mois="2026-10" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="38.40">
   <td class="c-date"><a href="quinte/2026-10-09.html">09/10</a></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">10</span><span class="tapis plein petit">14</span><span class="tapis petit">13</span><span class="tapis plein petit">6</span><span class="tapis petit">5</span><span class="tapis plein petit">15</span><span class="tapis petit">2</span><span class="tapis petit">12</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">14</span><span class="tapis plein petit" title="2e">6</span><span class="tapis plein petit" title="3e">15</span><span class="tapis hors petit" title="4e">7</span><span class="tapis plein petit" title="5e">10</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 73,60 €"><span class="etat partiel somme">38,40 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-08" data-mois="2026-10" data-type="plat" data-hip="Saint-Cloud" data-lis="2" data-tr="3" data-p1="place" data-pl="1.90" data-cg="partiel" data-mise="112.00" data-enc="27.60">
   <td class="c-date"><a href="quinte/2026-10-08.html">08/10</a></td>
   <td class="c-course">Saint-Cloud<br><span class="meta">R1C1</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">8</span><span class="tapis plein petit">1</span><span class="tapis plein petit">5</span><span class="tapis petit">9</span><span class="tapis petit">16</span><span class="tapis petit">3</span><span class="tapis petit">11</span><span class="tapis petit">6</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">1</span><span class="tapis plein petit" title="2e">5</span><span class="tapis plein petit" title="3e">8</span><span class="tapis hors petit" title="4e">4</span><span class="tapis hors petit" title="5e">15</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 84,40 €"><span class="etat partiel somme">27,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-07" data-mois="2026-10" data-type="attele" data-hip="Enghien-Soisy" data-lis="2" data-tr="3" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-07.html">07/10</a></td>
   <td class="c-course">Enghien-Soisy<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">17</span><span class="tapis petit">12</span><span class="tapis plein petit">16</span><span class="tapis petit">18</span><span class="tapis plein petit">13</span><span class="tapis petit">15</span><span class="tapis petit">10</span><span class="tapis plein petit">14</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">16</span><span class="tapis hors petit" title="2e">5</span><span class="tapis plein petit" title="3e">14</span><span class="tapis plein petit" title="4e">13</span><span class="tapis hors petit" title="5e">2</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-06" data-mois="2026-10" data-type="haies" data-hip="Auteuil" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="35.20">
   <td class="c-date"><a href="quinte/2026-10-06.html">06/10</a></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C1</span><span class="type t-haies petit">Haies</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">9</span><span class="tapis plein petit">3</span><span class="tapis plein petit">2</span><span class="tapis plein petit">15</span><span class="tapis petit">12</span><span class="tapis petit">4</span><span class="tapis petit">14</span><span class="tapis plein petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis hors petit" title="1er">8</span><span class="tapis plein petit" title="2e">2</span><span class="tapis plein petit" title="3e">7</span><span class="tapis plein petit" title="4e">3</span><span class="tapis plein petit" title="5e">15</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 76,80 €"><span class="etat partiel somme">35,20 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-05" data-mois="2026-10" data-type="attele" data-hip="Enghien-Soisy" data-lis="3" data-tr="5" data-p1="place" data-pl="1.40" data-cg="gain" data-mise="112.00" data-enc="296.60">
   <td class="c-date"><a href="quinte/2026-10-05.html">05/10</a></td>
   <td class="c-course">Enghien-Soisy<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">9</span><span class="tapis petit">5</span><span class="tapis petit">12</span><span class="tapis petit">8</span><span class="tapis plein petit">11</span><span class="tapis plein petit">13</span><span class="tapis plein petit">3</span><span class="tapis plein petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">3</span><span class="tapis plein petit" title="2e">7</span><span class="tapis plein petit" title="3e">9</span><span class="tapis plein petit" title="4e">13</span><span class="tapis plein petit" title="5e">11</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont gain" data-label="Quinté+ top 8 (mise 112 €)" title="gain net : 184,60 €"><span class="etat top somme">296,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-04" data-mois="2026-10" data-type="plat" data-hip="ParisLongchamp" data-lis="2" data-tr="4" data-p1="gagnant" data-pl="1.40" data-cg="partiel" data-mise="112.00" data-enc="30.40">
   <td class="c-date"><a href="quinte/2026-10-04.html">04/10</a></td>
   <td class="c-course">ParisLongchamp<br><span class="meta">R1C5</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">1</span><span class="tapis plein petit">16</span><span class="tapis plein petit">9</span><span class="tapis petit">14</span><span class="tapis petit">11</span><span class="tapis petit">15</span><span class="tapis plein petit">10</span><span class="tapis petit">12</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">1</span><span class="tapis hors petit" title="2e">7</span><span class="tapis plein petit" title="3e">16</span><span class="tapis plein petit" title="4e">10</span><span class="tapis plein petit" title="5e">9</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 81,60 €"><span class="etat partiel somme">30,40 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-03" data-mois="2026-10" data-type="plat" data-hip="ParisLongchamp" data-lis="2" data-tr="2" data-p1="gagnant" data-pl="1.60" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-10-03.html">03/10</a></td>
   <td class="c-course">ParisLongchamp<br><span class="meta">R1C4</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">4</span><span class="tapis petit">18</span><span class="tapis petit">13</span><span class="tapis petit">9</span><span class="tapis petit">11</span><span class="tapis petit">6</span><span class="tapis plein petit">5</span><span class="tapis petit">16</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">4</span><span class="tapis plein petit" title="2e">5</span><span class="tapis hors petit" title="3e">8</span><span class="tapis hors petit" title="4e">17</span><span class="tapis hors petit" title="5e">3</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-10-02" data-mois="2026-10" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="5" data-p1="place" data-pl="2.30" data-cg="gain" data-mise="112.00" data-enc="241.00">
   <td class="c-date"><a href="quinte/2026-10-02.html">02/10</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">13</span><span class="tapis petit">9</span><span class="tapis petit">6</span><span class="tapis plein petit">4</span><span class="tapis plein petit">11</span><span class="tapis plein petit">12</span><span class="tapis petit">10</span><span class="tapis plein petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">4</span><span class="tapis plein petit" title="2e">11</span><span class="tapis plein petit" title="3e">13</span><span class="tapis plein petit" title="4e">12</span><span class="tapis plein petit" title="5e">7</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont gain" data-label="Quinté+ top 8 (mise 112 €)" title="gain net : 129,00 €"><span class="etat top somme">241,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-10-01" data-mois="2026-10" data-type="haies" data-hip="Auteuil" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="29.60">
   <td class="c-date"><a href="quinte/2026-10-01.html">01/10</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C1</span><span class="type t-haies petit">Haies</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">4</span><span class="tapis plein petit">3</span><span class="tapis plein petit">1</span><span class="tapis plein petit">14</span><span class="tapis petit">12</span><span class="tapis plein petit">9</span><span class="tapis petit">13</span><span class="tapis petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis hors petit" title="1er">15</span><span class="tapis plein petit" title="2e">3</span><span class="tapis plein petit" title="3e">14</span><span class="tapis plein petit" title="4e">1</span><span class="tapis plein petit" title="5e">9</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 82,40 €"><span class="etat partiel somme">29,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-30" data-mois="2026-09" data-type="attele" data-hip="Laval" data-lis="3" data-tr="5" data-p1="place" data-pl="1.40" data-cg="partiel" data-mise="112.00" data-enc="63.60">
   <td class="c-date"><a href="quinte/2026-09-30.html">30/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Laval<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">7</span><span class="tapis plein petit">5</span><span class="tapis petit">13</span><span class="tapis petit">3</span><span class="tapis plein petit">14</span><span class="tapis plein petit">9</span><span class="tapis plein petit">15</span><span class="tapis petit">4</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">5</span><span class="tapis plein petit" title="2e">9</span><span class="tapis plein petit" title="3e">7</span><span class="tapis plein petit" title="4e">14</span><span class="tapis plein petit" title="5e">15</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 48,40 €"><span class="etat partiel somme">63,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-29" data-mois="2026-09" data-type="plat" data-hip="Chantilly" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="28.00">
   <td class="c-date"><a href="quinte/2026-09-29.html">29/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Chantilly<br><span class="meta">R1C1</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">2</span><span class="tapis plein petit">1</span><span class="tapis plein petit">9</span><span class="tapis petit">7</span><span class="tapis petit">12</span><span class="tapis plein petit">4</span><span class="tapis petit">14</span><span class="tapis petit">11</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">1</span><span class="tapis plein petit" title="2e">9</span><span class="tapis hors petit" title="3e">15</span><span class="tapis plein petit" title="4e">2</span><span class="tapis plein petit" title="5e">4</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 84,00 €"><span class="etat partiel somme">28,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-28" data-mois="2026-09" data-type="attele" data-hip="Enghien-Soisy" data-lis="3" data-tr="4" data-p1="place" data-pl="1.40" data-cg="partiel" data-mise="112.00" data-enc="25.20">
   <td class="c-date"><a href="quinte/2026-09-28.html">28/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Enghien-Soisy<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">4</span><span class="tapis plein petit">15</span><span class="tapis petit">10</span><span class="tapis plein petit">14</span><span class="tapis petit">12</span><span class="tapis petit">2</span><span class="tapis petit">11</span><span class="tapis plein petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">15</span><span class="tapis plein petit" title="2e">4</span><span class="tapis plein petit" title="3e">14</span><span class="tapis hors petit" title="4e">5</span><span class="tapis plein petit" title="5e">7</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 86,80 €"><span class="etat partiel somme">25,20 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-27" data-mois="2026-09" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="3" data-p1="place" data-pl="1.20" data-cg="partiel" data-mise="112.00" data-enc="22.00">
   <td class="c-date"><a href="quinte/2026-09-27.html">27/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">12</span><span class="tapis plein petit">8</span><span class="tapis plein petit">14</span><span class="tapis petit">2</span><span class="tapis petit">15</span><span class="tapis petit">3</span><span class="tapis petit">4</span><span class="tapis petit">11</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">8</span><span class="tapis plein petit" title="2e">12</span><span class="tapis plein petit" title="3e">14</span><span class="tapis hors petit" title="4e">10</span><span class="tapis hors petit" title="5e">9</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 90,00 €"><span class="etat partiel somme">22,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-26" data-mois="2026-09" data-type="haies" data-hip="Auteuil" data-lis="2" data-tr="4" data-p1="gagnant" data-pl="2.10" data-cg="partiel" data-mise="112.00" data-enc="28.00">
   <td class="c-date"><a href="quinte/2026-09-26.html">26/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C3</span><span class="type t-haies petit">Haies</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">6</span><span class="tapis plein petit">4</span><span class="tapis petit">2</span><span class="tapis petit">13</span><span class="tapis plein petit">1</span><span class="tapis petit">10</span><span class="tapis plein petit">5</span><span class="tapis petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">6</span><span class="tapis plein petit" title="2e">5</span><span class="tapis hors petit" title="3e">12</span><span class="tapis plein petit" title="4e">4</span><span class="tapis plein petit" title="5e">1</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 84,00 €"><span class="etat partiel somme">28,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-25" data-mois="2026-09" data-type="attele" data-hip="Vincennes" data-lis="2" data-tr="4" data-p1="gagnant" data-pl="2.40" data-cg="partiel" data-mise="112.00" data-enc="58.00">
   <td class="c-date"><a href="quinte/2026-09-25.html">25/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">13</span><span class="tapis petit">9</span><span class="tapis petit">18</span><span class="tapis plein petit">12</span><span class="tapis petit">7</span><span class="tapis plein petit">11</span><span class="tapis petit">8</span><span class="tapis plein petit">10</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">13</span><span class="tapis plein petit" title="2e">11</span><span class="tapis plein petit" title="3e">12</span><span class="tapis plein petit" title="4e">10</span><span class="tapis hors petit" title="5e">15</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 54,00 €"><span class="etat partiel somme">58,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-24" data-mois="2026-09" data-type="plat" data-hip="Compiegne" data-lis="2" data-tr="5" data-p1="non" data-pl="0.00" data-cg="gain" data-mise="112.00" data-enc="162.80">
   <td class="c-date"><a href="quinte/2026-09-24.html">24/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Compiegne<br><span class="meta">R1C1</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">16</span><span class="tapis plein petit">8</span><span class="tapis plein petit">10</span><span class="tapis petit">6</span><span class="tapis petit">7</span><span class="tapis petit">3</span><span class="tapis plein petit">4</span><span class="tapis plein petit">13</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">13</span><span class="tapis plein petit" title="2e">8</span><span class="tapis plein petit" title="3e">10</span><span class="tapis plein petit" title="4e">4</span><span class="tapis plein petit" title="5e">16</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont gain" data-label="Quinté+ top 8 (mise 112 €)" title="gain net : 50,80 €"><span class="etat top somme">162,80 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-23" data-mois="2026-09" data-type="attele" data-hip="Argentan" data-lis="3" data-tr="3" data-p1="gagnant" data-pl="2.10" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-09-23.html">23/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Argentan<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">13</span><span class="tapis petit">8</span><span class="tapis petit">15</span><span class="tapis plein petit">12</span><span class="tapis petit">4</span><span class="tapis petit">1</span><span class="tapis petit">9</span><span class="tapis plein petit">6</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">13</span><span class="tapis plein petit" title="2e">6</span><span class="tapis hors petit" title="3e">5</span><span class="tapis plein petit" title="4e">12</span><span class="tapis hors petit" title="5e">18</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-09-22" data-mois="2026-09" data-type="haies" data-hip="Auteuil" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="38.40">
   <td class="c-date"><a href="quinte/2026-09-22.html">22/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C4</span><span class="type t-haies petit">Haies</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">12</span><span class="tapis plein petit">8</span><span class="tapis plein petit">10</span><span class="tapis plein petit">1</span><span class="tapis petit">5</span><span class="tapis plein petit">3</span><span class="tapis petit">16</span><span class="tapis petit">6</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">1</span><span class="tapis hors petit" title="2e">4</span><span class="tapis plein petit" title="3e">3</span><span class="tapis plein petit" title="4e">10</span><span class="tapis plein petit" title="5e">8</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 73,60 €"><span class="etat partiel somme">38,40 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-21" data-mois="2026-09" data-type="attele" data-hip="La Capelle" data-lis="3" data-tr="4" data-p1="place" data-pl="1.40" data-cg="partiel" data-mise="112.00" data-enc="46.00">
   <td class="c-date"><a href="quinte/2026-09-21.html">21/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">La Capelle<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">16</span><span class="tapis plein petit">13</span><span class="tapis plein petit">4</span><span class="tapis petit">8</span><span class="tapis petit">15</span><span class="tapis petit">6</span><span class="tapis petit">9</span><span class="tapis plein petit">3</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">13</span><span class="tapis plein petit" title="2e">3</span><span class="tapis plein petit" title="3e">16</span><span class="tapis plein petit" title="4e">4</span><span class="tapis hors petit" title="5e">11</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 66,00 €"><span class="etat partiel somme">46,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-20" data-mois="2026-09" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="5" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="99.40">
   <td class="c-date"><a href="quinte/2026-09-20.html">20/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">9</span><span class="tapis plein petit">12</span><span class="tapis plein petit">8</span><span class="tapis plein petit">13</span><span class="tapis plein petit">4</span><span class="tapis petit">5</span><span class="tapis plein petit">7</span><span class="tapis petit">11</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">8</span><span class="tapis plein petit" title="2e">13</span><span class="tapis plein petit" title="3e">12</span><span class="tapis plein petit" title="4e">7</span><span class="tapis plein petit" title="5e">4</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 12,60 €"><span class="etat partiel somme">99,40 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-19" data-mois="2026-09" data-type="plat" data-hip="Chantilly" data-lis="2" data-tr="2" data-p1="place" data-pl="3.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-09-19.html">19/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Chantilly<br><span class="meta">R1C4</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">12</span><span class="tapis petit">13</span><span class="tapis petit">4</span><span class="tapis petit">14</span><span class="tapis petit">7</span><span class="tapis petit">9</span><span class="tapis petit">15</span><span class="tapis plein petit">2</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis hors petit" title="1er">5</span><span class="tapis hors petit" title="2e">1</span><span class="tapis plein petit" title="3e">12</span><span class="tapis hors petit" title="4e">8</span><span class="tapis plein petit" title="5e">2</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-09-18" data-mois="2026-09" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="2" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-09-18.html">18/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">8</span><span class="tapis plein petit">1</span><span class="tapis plein petit">5</span><span class="tapis petit">2</span><span class="tapis petit">15</span><span class="tapis petit">13</span><span class="tapis petit">11</span><span class="tapis petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis hors petit" title="1er">6</span><span class="tapis plein petit" title="2e">1</span><span class="tapis plein petit" title="3e">5</span><span class="tapis hors petit" title="4e">4</span><span class="tapis hors petit" title="5e">14</span></div></td><td class="res num c-trouves" data-label="Trouvés">2/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
-</tr><tr>
+</tr><tr data-jour="2026-09-17" data-mois="2026-09" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="3" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="56.00">
   <td class="c-date"><a href="quinte/2026-09-17.html">17/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">1</span><span class="tapis plein petit">7</span><span class="tapis petit">5</span><span class="tapis petit">8</span><span class="tapis plein petit">6</span><span class="tapis petit">4</span><span class="tapis plein petit">3</span><span class="tapis petit">14</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">7</span><span class="tapis plein petit" title="2e">6</span><span class="tapis plein petit" title="3e">3</span><span class="tapis hors petit" title="4e">10</span><span class="tapis hors petit" title="5e">11</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 56,00 €"><span class="etat partiel somme">56,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-16" data-mois="2026-09" data-type="attele" data-hip="Feurs" data-lis="4" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="25.60">
   <td class="c-date"><a href="quinte/2026-09-16.html">16/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Feurs<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">14</span><span class="tapis plein petit">7</span><span class="tapis petit">15</span><span class="tapis plein petit">9</span><span class="tapis petit">13</span><span class="tapis plein petit">10</span><span class="tapis petit">1</span><span class="tapis petit">4</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 4 sur 5" title="lisibilité 4/5 : course plutôt claire sur le papier"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span> 4/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">9</span><span class="tapis plein petit" title="2e">7</span><span class="tapis plein petit" title="3e">10</span><span class="tapis hors petit" title="4e">6</span><span class="tapis plein petit" title="5e">14</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 86,40 €"><span class="etat partiel somme">25,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-15" data-mois="2026-09" data-type="plat" data-hip="Compiegne" data-lis="2" data-tr="4" data-p1="place" data-pl="2.20" data-cg="partiel" data-mise="112.00" data-enc="29.60">
   <td class="c-date"><a href="quinte/2026-09-15.html">15/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Compiegne<br><span class="meta">R1C1</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">6</span><span class="tapis petit">1</span><span class="tapis plein petit">4</span><span class="tapis plein petit">7</span><span class="tapis petit">15</span><span class="tapis petit">14</span><span class="tapis plein petit">8</span><span class="tapis petit">9</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">7</span><span class="tapis plein petit" title="2e">8</span><span class="tapis plein petit" title="3e">6</span><span class="tapis plein petit" title="4e">4</span><span class="tapis hors petit" title="5e">12</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 82,40 €"><span class="etat partiel somme">29,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-14" data-mois="2026-09" data-type="attele" data-hip="Beaumont-De-Lomagne" data-lis="3" data-tr="5" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="49.60">
   <td class="c-date"><a href="quinte/2026-09-14.html">14/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Beaumont-De-Lomagne<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">14</span><span class="tapis petit">12</span><span class="tapis plein petit">10</span><span class="tapis plein petit">6</span><span class="tapis plein petit">13</span><span class="tapis plein petit">9</span><span class="tapis petit">4</span><span class="tapis petit">7</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">6</span><span class="tapis plein petit" title="2e">10</span><span class="tapis plein petit" title="3e">9</span><span class="tapis plein petit" title="4e">13</span><span class="tapis plein petit" title="5e">14</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat top" title="les 5 premiers sont dans mon top 8">5/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 62,40 €"><span class="etat partiel somme">49,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-13" data-mois="2026-09" data-type="plat" data-hip="ParisLongchamp" data-lis="2" data-tr="3" data-p1="place" data-pl="1.80" data-cg="partiel" data-mise="112.00" data-enc="26.00">
   <td class="c-date"><a href="quinte/2026-09-13.html">13/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">ParisLongchamp<br><span class="meta">R1C3</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">4</span><span class="tapis petit">5</span><span class="tapis plein petit">12</span><span class="tapis plein petit">10</span><span class="tapis petit">17</span><span class="tapis petit">18</span><span class="tapis petit">6</span><span class="tapis petit">8</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">12</span><span class="tapis plein petit" title="2e">4</span><span class="tapis plein petit" title="3e">10</span><span class="tapis hors petit" title="4e">14</span><span class="tapis hors petit" title="5e">7</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 86,00 €"><span class="etat partiel somme">26,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-11" data-mois="2026-09" data-type="attele" data-hip="Vincennes" data-lis="3" data-tr="4" data-p1="gagnant" data-pl="1.60" data-cg="partiel" data-mise="112.00" data-enc="23.60">
   <td class="c-date"><a href="quinte/2026-09-11.html">11/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Vincennes<br><span class="meta">R1C4</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">5</span><span class="tapis plein petit">14</span><span class="tapis plein petit">8</span><span class="tapis petit">3</span><span class="tapis petit">4</span><span class="tapis plein petit">11</span><span class="tapis petit">10</span><span class="tapis petit">13</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 3 sur 5" title="lisibilité 3/5 : course assez ouverte"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 3/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">5</span><span class="tapis plein petit" title="2e">8</span><span class="tapis plein petit" title="3e">14</span><span class="tapis hors petit" title="4e">7</span><span class="tapis plein petit" title="5e">11</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat gagne">gagnant</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 88,40 €"><span class="etat partiel somme">23,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-10" data-mois="2026-09" data-type="plat" data-hip="ParisLongchamp" data-lis="2" data-tr="3" data-p1="place" data-pl="1.60" data-cg="partiel" data-mise="112.00" data-enc="52.00">
   <td class="c-date"><a href="quinte/2026-09-10.html">10/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">ParisLongchamp<br><span class="meta">R1C1</span><span class="type t-plat petit">Plat</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis plein petit">9</span><span class="tapis petit">1</span><span class="tapis petit">6</span><span class="tapis petit">11</span><span class="tapis plein petit">13</span><span class="tapis petit">10</span><span class="tapis plein petit">3</span><span class="tapis petit">15</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">3</span><span class="tapis plein petit" title="2e">9</span><span class="tapis plein petit" title="3e">13</span><span class="tapis hors petit" title="4e">2</span><span class="tapis hors petit" title="5e">5</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat place">placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 60,00 €"><span class="etat partiel somme">52,00 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-09" data-mois="2026-09" data-type="attele" data-hip="Angers" data-lis="2" data-tr="4" data-p1="non" data-pl="0.00" data-cg="partiel" data-mise="112.00" data-enc="35.60">
   <td class="c-date"><a href="quinte/2026-09-09.html">09/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Angers<br><span class="meta">R1C1</span><span class="type t-attele petit">Attelé</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">9</span><span class="tapis plein petit">6</span><span class="tapis plein petit">5</span><span class="tapis plein petit">3</span><span class="tapis petit">7</span><span class="tapis plein petit">14</span><span class="tapis petit">15</span><span class="tapis petit">2</span></div></td>
   <td class="c-lis" data-label="Lisibilité"><span class="note" aria-label="note 2 sur 5" title="lisibilité 2/5 : course ouverte"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span> 2/5</td>
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">14</span><span class="tapis plein petit" title="2e">3</span><span class="tapis plein petit" title="3e">5</span><span class="tapis plein petit" title="4e">6</span><span class="tapis hors petit" title="5e">12</span></div></td><td class="res num c-trouves" data-label="Trouvés"><span class="etat place" title="4 des 5 premiers sont dans mon top 8">4/5</span></td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont partiel" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 76,40 €"><span class="etat partiel somme">35,60 €</span></td>
-</tr><tr>
+</tr><tr data-jour="2026-09-08" data-mois="2026-09" data-type="haies" data-hip="Auteuil" data-lis="2" data-tr="3" data-p1="non" data-pl="0.00" data-cg="perte" data-mise="112.00" data-enc="0.00">
   <td class="c-date"><a href="quinte/2026-09-08.html">08/09</a> <span class="meta tard">après coup</span></td>
   <td class="c-course">Auteuil<br><span class="meta">R1C1</span><span class="type t-haies petit">Haies</span></td>
   <td class="c-top8" data-label="Mon top 8"><div class="rangee"><span class="tapis petit">1</span><span class="tapis petit">2</span><span class="tapis petit">16</span><span class="tapis petit">10</span><span class="tapis plein petit">8</span><span class="tapis plein petit">9</span><span class="tapis petit">13</span><span class="tapis plein petit">5</span></div></td>
@@ -477,6 +488,188 @@
   <td class="res c-arr" data-label="Arrivée"><div class="rangee"><span class="tapis plein petit" title="1er">8</span><span class="tapis hors petit" title="2e">14</span><span class="tapis plein petit" title="3e">9</span><span class="tapis hors petit" title="4e">4</span><span class="tapis plein petit" title="5e">5</span></div></td><td class="res num c-trouves" data-label="Trouvés">3/5</td><td class="res c-premier" data-label="Mon 1er"><span class="etat non">non placé</span></td><td class="res mont c-mont perte" data-label="Quinté+ top 8 (mise 112 €)" title="perte nette : 112,00 €">0,00 €</td>
 </tr></tbody>
   </table></div>
+  <script>
+(function () {
+  "use strict";
+  var boite = document.getElementById("filtres");
+  var corps = document.querySelector(".registre-boite tbody");
+  if (!boite || !corps || !window.addEventListener || !boite.querySelectorAll) return;
+  var lignes = [].slice.call(corps.querySelectorAll("tr[data-jour]"));
+  var choix = [].slice.call(boite.querySelectorAll("select[data-f]"));
+  var bilan = document.getElementById("f-bilan");
+  var compte = boite.querySelector(".f-compte");
+  var PRONO = { lis: 1, tr: 1, p1: 1, cg: 1 };
+  var un = boite.getAttribute("data-un"), plur = boite.getAttribute("data-plur");
+  var champ = boite.getAttribute("data-champ");
+  function va(tr, f, v) {
+    if (!v) return true;
+    if (PRONO[f] && tr.hasAttribute("data-sans")) return false;
+    var d = tr.getAttribute("data-" + f);
+    if (d === null) return false;
+    if (f === "tr" && v === "0-2") return +d <= 2;
+    if (f === "p1" && v === "pg") return d === "gagnant" || d === "place";
+    return d === v;
+  }
+  function etat() {
+    var e = {};
+    choix.forEach(function (s) { e[s.getAttribute("data-f")] = s.value; });
+    return e;
+  }
+  function garde(tr, e, sauf) {
+    for (var f in e) { if (f !== sauf && !va(tr, f, e[f])) return false; }
+    return true;
+  }
+  function nb(x, d) {
+    return x.toFixed(d).replace(".", ",").replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+  function eur(x) { return nb(x, 2) + " €"; }
+  function argent(x, ref) {
+    var c = x > ref + 0.004 ? "gain" : (x < ref - 0.004 ? "perte" : "");
+    return '<b class="' + c + '">' + eur(x) + "</b>";
+  }
+  function maj() {
+    var e = etat(), actif = false, vus = 0, sans = 0, faits = [];
+    for (var f in e) { if (e[f]) actif = true; }
+    lignes.forEach(function (tr) {
+      var ok = garde(tr, e, null);
+      tr.hidden = !ok;
+      if (!ok) return;
+      vus++;
+      if (tr.hasAttribute("data-sans")) sans++;
+      else if (tr.hasAttribute("data-tr")) faits.push(tr);
+    });
+    choix.forEach(function (s) {
+      var f = s.getAttribute("data-f");
+      if (s.classList) s.classList.toggle("actif", !!s.value);
+      [].forEach.call(s.options, function (o) {
+        if (!o.value) return;
+        var n = 0;
+        lignes.forEach(function (tr) { if (garde(tr, e, f) && va(tr, f, o.value)) n++; });
+        o.textContent = o.getAttribute("data-lib") + " (" + n + ")";
+        o.disabled = !n && o.value !== s.value;
+      });
+    });
+    compte.textContent = actif ? (vus + " ligne" + (vus > 1 ? "s" : "") + " sur " + lignes.length) : "";
+    if (!actif) { bilan.hidden = true; return; }
+    var n = faits.length, h = [];
+    if (!n) {
+      bilan.textContent = "Aucune course courue avec mon prono dans cette sélection.";
+      bilan.hidden = false;
+      return;
+    }
+    var tr = 0, c5 = 0, c4 = 0, npl = 0, pla = 0, rpl = 0, mise = 0, enc = 0;
+    faits.forEach(function (t) {
+      var k = +t.getAttribute("data-tr");
+      tr += k; if (k === 5) c5++; if (k === 4) c4++;
+      var pl = t.getAttribute("data-pl");
+      if (pl !== null) {
+        npl++; rpl += +pl;
+        var p = t.getAttribute("data-p1");
+        if (p === "place" || p === "gagnant") pla++;
+      }
+      var m = t.getAttribute("data-mise");
+      if (m !== null) { mise += +m; enc += +t.getAttribute("data-enc"); }
+    });
+    h.push("<span><b>" + n + " " + (n > 1 ? plur : un) + "</b> couru" + (n > 1 ? "s" : "") +
+           " avec mon prono" + (sans ? " (+ " + sans + " jour" + (sans > 1 ? "s" : "") + " sans prono)" : "") + "</span>");
+    h.push("<span>Trouvés : <b>" + nb(tr / n, 1) + "</b> des 5 premiers en moyenne (5/5 : " + c5 +
+           " fois, 4/5 : " + c4 + " fois)</span>");
+    if (npl) {
+      h.push("<span>Mon 1er placé : <b>" + pla + " fois sur " + npl + "</b> (" + Math.round(100 * pla / npl) +
+             " %) · 1 € placé sur lui → " + argent(rpl / npl, 1) + " en moyenne</span>");
+    }
+    if (mise) {
+      h.push("<span>" + champ + " : " + argent(enc, mise) + " rendus pour " + eur(mise) +
+             " misés, soit " + argent(enc / mise, 1) + " pour 1 €</span>");
+    }
+    if (n < 30) {
+      h.push('<span class="f-peu">Moins de 30 courses : beaucoup trop peu pour en tirer quoi que ce soit.</span>');
+    }
+    if (e.tr || e.p1 || e.cg) {
+      h.push('<span class="f-apres">Ce filtre retient les courses selon leur résultat : on ne le connaît qu’après l’arrivée, ce n’est pas une façon de choisir ses courses.</span>');
+    }
+    bilan.innerHTML = h.join(" ");
+    bilan.hidden = false;
+  }
+  choix.forEach(function (s) { s.addEventListener("change", maj); });
+  /* v29.25 — TRIER (Rocco, 18/11 : « juste les triangles vers le haut ou vers le bas à côté
+     de chaque intitulé ») : un clic sur un titre trie, un 2e clic inverse l'ordre ; à égalité,
+     le plus récent d'abord ; une ligne sans la valeur (course pas encore courue, jour sans
+     prono) reste en bas. PC : les titres des colonnes ; fiches : la rangée « Trier : » */
+  var ORDRE = { jour: ["le plus récent d’abord", "le plus ancien d’abord"], hip: ["de Z à A", "de A à Z"],
+    lis: ["la plus claire d’abord (5 → 1)", "la plus ouverte d’abord (1 → 5)"], tr: ["5/5 d’abord", "0/5 d’abord"],
+    p1: ["gagnant d’abord", "non placé d’abord"], enc: ["le plus gros montant d’abord", "le plus petit d’abord"] };
+  var DEF = { jour: "desc", hip: "asc", lis: "desc", tr: "desc", p1: "desc", enc: "desc" };
+  var tri = { k: "jour", s: -1 };
+  var ths = [].slice.call(document.querySelectorAll(".registre-boite th[data-tri]"));
+  var barre = document.getElementById("tri-barre");
+  var pastilles = barre ? [].slice.call(barre.querySelectorAll("button[data-tri]")) : [];
+  var sensTxt = barre ? barre.querySelector(".tri-sens") : null;
+  function val(t, k) {
+    if (k === "jour") return t.getAttribute("data-jour");
+    if (k === "hip") return t.getAttribute("data-hip") || null;
+    if (k === "p1") {
+      var p = t.getAttribute("data-p1");
+      return p === "gagnant" ? 2 : (p === "place" ? 1 : (p === "non" ? 0 : null));
+    }
+    var v = t.getAttribute("data-" + k);
+    return v === null || v === "" ? null : +v;
+  }
+  function trier() {
+    var k = tri.k, s = tri.s;
+    lignes.slice().sort(function (a, b) {
+      var x = val(a, k), y = val(b, k);
+      if ((x === null) !== (y === null)) return x === null ? 1 : -1;
+      if (x !== null && x !== y) {
+        var c = typeof x === "string" ? x.localeCompare(y, "fr", { sensitivity: "base" }) : (x < y ? -1 : 1);
+        if (c) return c * s;
+      }
+      var ja = a.getAttribute("data-jour"), jb = b.getAttribute("data-jour");
+      return ja < jb ? 1 : (ja > jb ? -1 : 0);
+    }).forEach(function (t) { corps.appendChild(t); });
+    var nom = s > 0 ? "ascending" : "descending";
+    ths.forEach(function (th) {
+      th.setAttribute("aria-sort", th.getAttribute("data-tri") === k ? nom : "none");
+    });
+    pastilles.forEach(function (b) {
+      var on = b.getAttribute("data-tri") === k;
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      if (on) b.setAttribute("data-sens", nom); else b.removeAttribute("data-sens");
+    });
+    if (sensTxt) sensTxt.textContent = (ORDRE[k] || ORDRE.jour)[s > 0 ? 1 : 0];
+  }
+  function choisir(k) {
+    if (tri.k === k) tri.s = -tri.s;
+    else { tri.k = k; tri.s = DEF[k] === "asc" ? 1 : -1; }
+    trier();
+  }
+  ths.forEach(function (th) {                    /* PC : le titre d'une colonne devient un bouton */
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "tri";
+    b.title = "Trier par cette colonne (un 2e clic inverse l’ordre)";
+    while (th.firstChild) b.appendChild(th.firstChild);
+    var f = document.createElement("span");
+    f.className = "fleche";
+    f.setAttribute("aria-hidden", "true");
+    f.innerHTML = '<i class="t-h">▲</i><i class="t-b">▼</i>';
+    b.appendChild(f);
+    th.appendChild(b);
+    b.addEventListener("click", function () { choisir(th.getAttribute("data-tri")); });
+  });
+  pastilles.forEach(function (b) {               /* fiches : les mêmes titres, en boutons */
+    b.addEventListener("click", function () { choisir(b.getAttribute("data-tri")); });
+  });
+  boite.querySelector(".f-raz").addEventListener("click", function () {
+    choix.forEach(function (s) { s.value = ""; });
+    maj();
+  });
+  trier();
+  boite.hidden = false;                          /* le panneau des filtres reste FERMÉ au départ */
+  if (barre) barre.hidden = false;
+  maj();
+})();
+</script>
 </section>
 <section class="bilan" aria-labelledby="t-bilan">
   <h2 id="t-bilan">Mon bilan depuis le 8 septembre 2026</h2>
