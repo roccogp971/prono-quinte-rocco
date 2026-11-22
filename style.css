@@ -611,3 +611,32 @@ details.tous .stat-boite { margin-top: 8px; }
   .stat-boite:not(.etroite) td::before { content: attr(data-label); font-size: .74rem; color: var(--doux);
     font-weight: 400; line-height: 1.25; }
 }
+
+/* v29.28 — TOUS LES RAPPORTS DE LA COURSE (demande de Rocco du 22/11) : un petit tableau
+   par pari, en colonnes de journal (2 sur ordinateur : à 3, « 14-10-8-1-16 » se coupait en
+   deux ; 1 sur téléphone), sur le fond doré des rapports. Montant à droite, jamais coupé ;
+   sur téléphone, la combinaison passe SOUS le libellé (« Ordre » / « 14-10-8-1-16 »). */
+.tous-rap { margin-top: 2px; padding-top: 14px; border-top: 1px solid var(--arrivee-trait); }
+.tous-rap h3 { margin: 0 0 2px; }
+.tous-rap > .meta { margin: 0 0 12px; }
+.rt-paris { columns: 2 330px; column-gap: 14px; }
+.rt-pari { display: inline-block; width: 100%; margin: 0 0 12px; break-inside: avoid;
+  background: var(--carte); border: 1px solid var(--arrivee-trait); border-radius: 8px; overflow: hidden; }
+.rt-pari table { font-size: .9rem; }
+.rt-pari caption { text-align: left; font-weight: 700; padding: 8px 10px 6px; color: var(--encre); }
+.rt-mise { float: right; margin-left: 8px; font-weight: 400; font-size: .82rem; color: var(--doux); }
+.rt-pari th, .rt-pari td { padding: 5px 10px; border: 0; border-top: 1px solid var(--trait);
+  font-size: .9rem; letter-spacing: 0; text-transform: none; vertical-align: baseline; }
+.rt-pari th { color: var(--doux); font-weight: 400; text-align: left; white-space: normal; }
+.rt-pari .rt-combi { color: var(--encre); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rt-pari td.num { text-align: right; font-weight: 600; white-space: nowrap; width: 1%; }
+.rt-pari td.rt-sansg { font-weight: 400; color: var(--doux); }
+@media (max-width: 479px) {
+  .rt-pari table, .rt-pari tbody, .rt-pari caption { display: block; }
+  .rt-pari tr { display: grid; grid-template-columns: 1fr auto; column-gap: 10px; align-items: baseline;
+    padding: 5px 10px; border-top: 1px solid var(--trait); }
+  .rt-pari th, .rt-pari td { padding: 0; border: 0; }
+  .rt-pari .rt-combi { white-space: normal; overflow-wrap: anywhere; }
+  .rt-pari tr.rt-3 .rt-combi { grid-column: 1; grid-row: 2; }
+  .rt-pari tr.rt-3 .num { grid-column: 2; grid-row: 1; }
+}
